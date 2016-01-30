@@ -25,11 +25,12 @@
 // 	'tablePrefix' => 'craft',
 //
 // );
+
 $url=parse_url(getenv(“CLEARDB_DATABASE_URL”));
 return array(
 ‘server’ => $url[“host”],
-‘user’ => $url[“root”],
-‘password’ => $url[“”],
+‘user’ => $url[“user”],
+‘password’ => $url[“pass”],
 ‘database’ => substr($url[“path”],1),
 ‘tablePrefix’ => ‘craft’,
 );
