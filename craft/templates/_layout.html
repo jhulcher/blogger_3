@@ -17,59 +17,229 @@
 	<link rel="home" href="{{ siteUrl }}" />
 
 	<style type="text/css">
-		body { margin: 50px; font-family: sans-serif; background: #fff; }
-		#container { margin: 0 auto; width: 700px;
-			-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-			        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-		}
 
-		#header, #footer { display: block; color: #fff; background: #da5a47; }
+    /*css reset here*/
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center, dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {margin: 0; padding: 0; border: 0;
+    	font-size: 100%; font: inherit; vertical-align: baseline;}
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {display: block;}
+    body {line-height: 1;}
+    ol, ul {list-style: none;}
+    blockquote, q {quotes: none;}
+    blockquote:before, blockquote:after,
+    q:before, q:after {content: '';content: none;}
+    table {border-collapse: collapse;border-spacing: 0;}
+		body {font-family: monospace;background: black;height: 100%;border-width: 0;}
+    a {text-decoration: none;}
+
+    /*my css starts here*/
+    p {
+      padding: 0px 0px 15px 0px;
+    }
+    .text-link:hover {
+      color: #0ae0ff;
+    }
+    body {height: 100%;}
+		#container {
+      border-width: 0;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      position: relative;
+      vertical-align: top;
+			/*-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+			        box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/
+		}
+    div {
+      height: 100%;
+    }
+
+    .header-container {
+      width: 100%;
+      background-color: #2a2a2a;
+      /*position: fixed;*/
+      top: 0;
+      overflow-y:scroll;
+
+
+    }
+    .content-container {
+      overflow: scroll;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      position: relative;
+    }
+    .stripes {
+      /*background-color: green;*/
+      background-image: url("/craft/public/images/texture_tile-bg.png");
+    }
+		#header, #footer { display: block; color: #fff; width: 80%; margin: 0 auto;}
 		#header a, #footer a { color: #fff; }
-		#header { border-radius: 7px 7px 0 0; padding: 25px; }
+		#header {
+      /*border-radius: 7px 7px 0 0; */
+      height: 100%;
+      top: 0;
+      padding: 25px 0px 15px 0px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      width: 100%;
+      background-color: red;
+    }
+    main {height: 100%; width: 80%; margin: 0 auto;}
 		#header:after { content: '.'; display: block; height: 0; clear: both; visibility: hidden; }
 		#header a { text-decoration: none; }
-		#header h1 { float: left; margin: 0; font-weight: normal; font-size: 30px; line-height: 1; }
-		#header nav { display: block; float: right; }
-		#header nav ul { margin: 0; list-style-type: none; }
-		#header nav ul li { float: left; margin-left: 20px; }
-		#header nav ul li a { display: block; margin-top: 4px; line-height: 22px; }
-		#header nav ul li a:hover,
-		#header nav ul li a.active { border-bottom: 2px solid #fff; }
-		#header nav ul li a.active { cursor: default; }
+		#header h1 { float: left; margin: 0 auto; font-weight: normal; font-size: 30px; line-height: 1; }
+		#header nav { display: block; float: right; height: 100%;}
+		#header nav ul { margin: 0 auto; list-style-type: none; }
+		#header nav ul li { float: left; margin-left: 0px; }
+		#header nav ul li a { display: block; margin: 0 auto; line-height: 22px; }
+		/*#header nav ul li a:hover,*/
+		/*#header nav ul li a.active { border-bottom: 2px solid #fff; }*/
 
-		#content { display: block; padding: 25px; background: #fff; }
+		#content { height: 100%; display: block; padding: 25px; background: #fff; }
 		#content h1 { margin-top: 0; font-size: 35px; font-weight: bold; }
 		#content a { color: #da5a47; text-decoration: none; }
-		#content a:hover { text-decoration: underline; }
+		/*#content a:hover { text-decoration: underline; }*/
+		#footer {
+      /*border-radius: 0 0 7px 7px; */
+      padding: 15px; font-size: 12px; text-align: center; }
+    .address {
+      text-align: left;
+      font-size: 20px;
+      display: inline-block;
+    }
+    .company-text {
+      float: left;
+    }
+    .icon {
+      width: 40px;
+      border-radius: 7px;
+    }
+    .title {
+      width: 220px;
+      height: 44px;
+      background:transparent url('/craft/public/images/paradata-logo.png') center top no-repeat;
+    }
+    .title:hover {
+      width: 220px;
+      height: 44px;
+      background-image: url('/craft/public/images/paradata-logo-alt.png');
+    }
+    .header-link { padding: 5px; color: white; font-size: 25px; height: 100%; display: inline;}
+    .header-link:hover {color: #0ae0ff; height: 100%;}
 
-		#footer { border-radius: 0 0 7px 7px; padding: 15px; font-size: 12px; text-align: center; }
 	</style>
 </head>
 
 <body>
 	<div id="container">
-		<header id="header">
-			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
 
+    <div class="header-container stripes">
+  		<header id="header">
+  			<h1>
+          <a href="{{ siteUrl }}">
+            <div class="title"></div>
+          </a>
+        </h1>
 
-			<nav>
-				<ul>
-					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-          <li><a href="{{ url('pizza') }}" {% if craft.request.firstSegment == 'pizza' %}class="active"{% endif %}>Pizza</a></li>
-				</ul>
-			</nav>
-		</header>
+  			<nav>
+          <a href="{{ url('news') }}" {% if craft.request.firstSegment == 'NEWS' %}
+             class="header-link"{% endif %}>
+            <div class="header-link">
+              SOLUTIONS
+            </div>
+          </a>
 
-		<main id="content" role="main">
-			{% block content %}
-				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
-				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
-			{% endblock %}
-		</main>
+          <a href="{{ url('news') }}" {% if craft.request.firstSegment == 'NEWS' %}
+             class="header-link"{% endif %}>
+            <div class="header-link">
+              PRICING
+            </div>
+          </a>
 
-		<footer id="footer">
-			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}. All rights reserved  •  Built with <a href="http://craftcms.com">Craft</a>
-		</footer>
+          <a href="{{ url('pizza') }}" {% if craft.request.firstSegment == 'pizza' %}
+             class="header-link"{% endif %}>
+            <div class="header-link">
+              LOG IN
+            </div>
+          </a>
+  			</nav>
+
+  		</header>
+    </div>
+
+    <div class="content-container">
+  		<main id="content" role="main">
+  			{% block content %}
+  				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>
+  				<p>See Twig’s <a href="http://twig.sensiolabs.org/doc/templates.html#template-inheritance">Template Inheritance</a> documentation for an explanation.</p>
+  			{% endblock %}
+  		</main>
+    </div>
+
+    <div class="header-container">
+      <div class="stripes">
+    		<footer id="footer">
+          <div class="address company-text">
+            <p>
+              COMPANY
+            </p>
+            <p>
+              CAREERS
+            </p>
+            <p>
+              Follow us:
+            </p>
+            <a href="https://twitter.com/Paradata_io?lang=en">
+              <img class="icon" src="/craft/public/images/twitter.png">
+            </a>
+            <a href="https://www.facebook.com/paradata.io/?fref=ts">
+              <img class="icon" src="/craft/public/images/facebook.png">
+            </a>
+            <a href="https://www.linkedin.com/company/1039017?trk=tyah&trk" +
+                "Info=clickedVertical%3Acompany%2CclickedEntityId%3A1039017%" +
+                "2Cidx%3A2-1-2%2CtarId%3A1453508639963%2Ctas%3Aparada">
+              <img class="icon" src="/craft/public/images/linkedin.png">
+            </a>
+          </div>
+
+          <div class="address">
+            <a href="https://goo.gl/maps/zLEQikvsJxQ2">
+              <p class="text-link">
+                Paradata<br />
+                200 North Almaden Blvd #250<br />
+                San Jose, CA 95110
+              </p>
+              <p>
+                408-791-2070
+              </p>
+            <a href="mailto:info@paradata.io">
+              <p class="text-link">
+                info@paradata.io
+              </p>
+            </a>
+          </div>
+        </footer>
+      </div>
+      <footer id="footer">
+        © 2016 • ALL RIGHTS RESERVED • PRIVACY POLICY
+  		</footer>
+    </div>
+
 	</div>
 </body>
 </html>
