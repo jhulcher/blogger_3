@@ -4,7 +4,7 @@
 $craftPath = '../craft';
 
 // Do not edit below this line
-$path = rtrim($craftPath, '/').'/craft/index.php';
+$path = rtrim($craftPath, '').'/app/index.php';
 
 if (!is_file($path))
 {
