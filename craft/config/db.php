@@ -31,9 +31,9 @@ $url=parse_url(getenv(“CLEARDB_DATABASE_URL”));
 return array(
 
 ‘server’ => $url[“host”],
-‘database’ => substr($url[“path”],1),
-‘user’ => $url[“user”],
-‘password’ => $url[“pass”],
+‘database’ "heroku_73495891f3b4fc1",
+‘user’ => "ba6e2134280371",
+‘password’ => "766df6b0",
 ‘tablePrefix’ => ‘craft’,
 
 );
