@@ -2,20 +2,76 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<h1>{{ entry.title }}</h1>
 
-  <br/>
-  (this is index.html in templates)
-  <br /><br />
 
-	{{ entry.body }}
-	<h2>Recent News</h2>
-	<ul>
 		{% for entry in craft.entries.section('news').limit(1).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-      <!-- <li><a href="dogs/index.html">doasdfasfsafdgs</a></li> -->
+
+      <div class="homepage-upper">
+        <div class="homepage-upper-inner">
+          <div>
+      			{{ entry.title }}
+          </div>
+
+          <div>
+            {% for image in entry.image %}
+              <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+            {% endfor %}
+          </div>
+
+          <div>
+            {{ entry.body }}
+          </div>
+
+        </div>
+      </div>
 
 		{% endfor %}
 
-	</ul>
+    <div class="homepage-middle">
+      <div class="homepage-middle-inner">
+
+        PARADATA DELIVERS
+
+        {% for entry in craft.entries.section('home2').order('lft desc').limit(3).find() %}
+
+              <div>
+                {{ entry.title }}
+              </div>
+
+              <div>
+                {{ entry.body }}
+              </div>
+
+        {% endfor %}
+
+        LINK GOES HERE
+      </div>
+
+    </div>
+
+    <div class="homepage-bottom">
+      <div class="homepage-bottom-inner">
+        {% for entry in craft.entries.section('homepagebottom').limit(1).find() %}
+          <div class="homepage-bottom-text">
+            <div>
+              {{ entry.title }}
+            </div>
+
+            <div>
+              {{ entry.body }}
+            </div>
+          </div>
+          <div class="homepage-bottom-image">
+            {% for image in entry.image %}
+              <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+            {% endfor %}
+          </div>
+        {% endfor %}
+
+        LINK GOES HERE
+      </div>
+
+    </div>
+
+
 {% endblock %}
