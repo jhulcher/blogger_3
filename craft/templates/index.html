@@ -22,8 +22,11 @@
 {% block content %}
 	<h1>{{ entry.title }}</h1>
 
-	{{ entry.body }}
+  <br/>
+  (this is index.html in templates)
+  <br /><br />
 
+	{{ entry.body }}
 	<h2>Recent News</h2>
 	<ul>
 		{% for entry in craft.entries.section('news').limit(5).find() %}
