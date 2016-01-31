@@ -6,7 +6,7 @@
  * All of your system's database configuration settings go in here.
  * You can see a list of the default settings in craft/app/etc/config/defaults/db.php
  */
-
+//
 // return array(
 //
 // 	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
@@ -27,10 +27,13 @@
 // );
 
 $url=parse_url(getenv(“CLEARDB_DATABASE_URL”));
+
 return array(
+
 ‘server’ => $url[“host”],
+‘database’ => substr($url[“path”],1),
 ‘user’ => $url[“user”],
 ‘password’ => $url[“pass”],
-‘database’ => "heroku_73495891f3b4fc1",
 ‘tablePrefix’ => ‘craft’,
+
 );
