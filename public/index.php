@@ -10,7 +10,7 @@ if (!is_file($path))
 {
 	if (function_exists('http_response_code'))
 	{
-		http_response_code(503);
+		http_response_code(404);
 	}
 
 	exit('Could not find your craft/ folder. Please ensure that <strong><code>$craftPath</code></strong> is set correctly in '.__FILE__);
