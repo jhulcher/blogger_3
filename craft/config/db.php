@@ -31,6 +31,6 @@ return array(
 ‘server’ => $url[“host”],
 ‘user’ => $url[“user”],
 ‘password’ => $url[“pass”],
-‘database’ => substr($url[“path”],1),
+‘database’ => "heroku_73495891f3b4fc1",
 ‘tablePrefix’ => ‘craft’,
 );
