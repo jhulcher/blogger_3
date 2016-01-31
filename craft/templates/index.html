@@ -4,10 +4,10 @@
 {% block content %}
 
 
-		{% for entry in craft.entries.section('news').limit(1).find() %}
+		{% for entry in craft.entries.section('homepagetop').limit(1).find() %}
 
-      <div class="homepage-upper">
-        <div class="homepage-upper-inner">
+      <div class="homepage-top">
+        <div class="homepage-top-inner">
           <div>
       			{{ entry.title }}
           </div>
@@ -32,7 +32,7 @@
 
         PARADATA DELIVERS
 
-        {% for entry in craft.entries.section('home2').order('lft desc').limit(3).find() %}
+        {% for entry in craft.entries.section('homepagemiddle').order('lft desc').limit(3).find() %}
 
               <div>
                 {{ entry.title }}
