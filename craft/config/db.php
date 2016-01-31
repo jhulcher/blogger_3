@@ -26,7 +26,7 @@
 //
 // );
 
-
+//
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 return array(
 	// The database server name or IP address. Usually this is 'localhost' or '127.0.0.1'.
