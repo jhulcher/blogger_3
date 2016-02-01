@@ -52,43 +52,17 @@
 		</div>
 	</div>
 
-
-
-	<!-- <div class="solutionpage-middle">
-		<div class="homepage-middle-inner">
-			<div class="homepage-middle-title">
-				PARADATA DELIVERS
-			</div>
-			<div>
-				{% for entry in craft.entries.section('homepagemiddle').order('lft desc').limit(3).find() %}
-
-					<div class="homepage-middle-list">
-						<div class="home-middle-num">
-							{{ entry.title }}
-						</div>
-					</div>
-
-					<div class="homepage-middle-list">
-						{{ entry.body }}
-					</div>
-
-				{% endfor %}
-			</div>
-
-		</div>
-	</div> -->
-
-	<div class="homepage-bottom">
+	<div class="homepage-middle">
 		<div class="homepage-bottom-inner">
-			{% for entry in craft.entries.section('homepagebottom').limit(1).find() %}
+			{% for entry in craft.entries.section('solution').title("1") %}
+
 				<div class="homepage-bottom-text">
 					<div class="homepage-middle-list">
 						<div class="home-middle-num">
 							{{ entry.title }}
 						</div>
 					</div>
-
-					<div>
+					<div class="solution-list-text">
 						{{ entry.body }}
 					</div>
 				</div>
@@ -98,14 +72,62 @@
 						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
 					{% endfor %}
 				</div>
+
 			{% endfor %}
 		</div>
 	</div>
 
+	<div class="homepage-bottom">
+		<div class="homepage-bottom-inner">
+			{% for entry in craft.entries.section('solution').title("2") %}
 
+				<div class="homepage-bottom-text">
+					<div class="homepage-middle-list">
+						<div class="home-middle-num">
+							{{ entry.title }}
+						</div>
+					</div>
+					<div class="solution-list-text">
+						{{ entry.body }}
+					</div>
+				</div>
 
+				<div class="homepage-bottom-image">
+					{% for image in entry.image %}
+						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+					{% endfor %}
+				</div>
 
-	<div class="homepage-middle-list">
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="homepage-middle">
+		<div class="homepage-bottom-inner">
+			{% for entry in craft.entries.section('solution').title("3") %}
+
+				<div class="homepage-bottom-text">
+					<div class="homepage-middle-list">
+						<div class="home-middle-num">
+							{{ entry.title }}
+						</div>
+					</div>
+					<div class="solution-list-text">
+						{{ entry.body }}
+					</div>
+				</div>
+
+				<div class="homepage-bottom-image">
+					{% for image in entry.image %}
+						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+					{% endfor %}
+				</div>
+
+			{% endfor %}
+		</div>
+	</div>
+
+	<div class="solution-bottom">
 		<div class="learn-button">
 			<a href="https://paradata.herokuapp.com/scorerequest"
 				 style="color: black;">
@@ -113,6 +135,5 @@
 			</a>
 		</div>
 	</div>
-
 
 {% endblock %}
