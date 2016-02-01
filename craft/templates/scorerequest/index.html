@@ -5,12 +5,12 @@
 {% block content %}
 	<h1>Schedule A Demo</h1>
 
-	{% for entry in craft.entries.section('scorerequest').limit(1).find() %}
+	{% for entry in craft.entries.section('ScoreRequest').limit(1).find() %}
 
     <form method="post" action="" accept-charset="UTF-8">
         <!-- <input type="hidden" name="redirect" value=""> -->
         <input type="hidden" name="action" value="entries/saveEntry">
-        <input type="hidden" name="sectionId" value="2">
+        <input type="hidden" name="sectionId" value="{{ entry.sectionId }}">
         <input id="title" type="text" name="title">
         <!-- <input type="hidden" name="enabled" value="4"> -->
 
