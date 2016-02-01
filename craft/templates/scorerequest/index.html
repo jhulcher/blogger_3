@@ -3,27 +3,41 @@
 {% set title = "Request Your Score" %}
 
 {% block content %}
-	<h1>Schedule A Demo</h1>
+	<div class="request-holder">
+		<div class="form-holder">
 
-	{% for entry in craft.entries.section('ScoreRequest').limit(1).find() %}
+			<center>
+				<img src="http://paradata.herokuapp.com/images/paradata-logo-alt.png">
 
-    <form method="post" action="" accept-charset="UTF-8">
-        <input type="hidden" name="action" value="entries/saveEntry">
-        <input type="hidden" name="sectionId" value="{{ entry.sectionId }}">
+				<div class="request-title">Schedule A Demo</div>
 
-        <div>
-          <input id="title" type="text" name="title">
-        </div>
-        <div>
-          <textarea id="body" name="fields[email]"></textarea>
-        </div>
-        <div>
-          <textarea id="body" name="fields[body]"></textarea>
-        </div>
+				{% for entry in craft.entries.section('ScoreRequest').limit(1).find() %}
 
-        <input type="submit" value="Publish">
-    </form>
+			    <form method="post" action="" accept-charset="UTF-8">
+			        <input type="hidden" name="action" value="entries/saveEntry">
+			        <input type="hidden" name="sectionId" value="{{ entry.sectionId }}">
+
+							<div class="request-form">
+				        <div>
+				          <input class="form-field" placeholder="Your Name" id="title" type="text" name="title">
+				        </div>
+				        <div>
+				          <textarea class="form-field-2" placeholder="Your Email Address" id="body" name="fields[email]"></textarea>
+				        </div>
+								<div>
+									<textarea class="form-field-2" placeholder="Your Phone Number" id="body" name="fields[phone]"></textarea>
+								</div>
+				        <div>
+				          <textarea class="form-field-2" placeholder="Your Company" id="body" name="fields[body]"></textarea>
+				        </div>
+							</div>
+
+			        <input class="form-button" type="submit" value="Send">
+			    </form>
 
 
-	{% endfor %}
+				{% endfor %}
+			</center>
+		</div>
+	</div>
 {% endblock %}

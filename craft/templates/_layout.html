@@ -52,7 +52,10 @@
     .text-link:hover {
       color: #0ae0ff;
     }
-    body {height: 100%;}
+    body {
+      height: 100%;
+      background-color: #2a2a2a;
+    }
 		#container {
       border-width: 0;
       margin: 0 auto;
@@ -61,6 +64,8 @@
       padding: 0;
       position: relative;
       vertical-align: top;
+      background-color: #2a2a2a;
+
 			/*-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 			        box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/
 		}
@@ -82,6 +87,7 @@
       background-color: white;
       position: relative;
       overflow-y: scroll;
+      margin: 0 auto;
     }
     .stripes {
       /*background-color: green;*/
@@ -98,7 +104,7 @@
     }
     .footer-top {
       width: 100%;
-      background-color: red;
+      background-color: #2a2a2a;
     }
     main {height: 100%; width: 100%; margin: 0 auto;}
 		#header:after { content: '.'; display: block; height: 0; clear: both; visibility: hidden; }
@@ -168,15 +174,86 @@
     .homepage-bottom {
       width: 100%;
       color: black;
-      background-color: #f1f1f1;
+      background-color: #2a2a2a;
     }
     .homepage-bottom-inner {
       height: 100%;
       width: 80%;
       margin: 0 auto;
     }
+    .request-holder {
+      background-color: #2a2a2a;
+      width: 100%;
+      height: 100%;
+      padding: 8% 0px 8% 0px;
 
-
+      /*position: absolute;*/
+      /*height: 400px;*/
+      /*background-image: url("https://paradata.herokuapp.com/images/texture_tile-bg.png");*/
+    }
+    .form-holder {
+      vertical-align: middle;
+      display: inline;
+      top: 50%;
+      position: relative;
+      bottom: 50%;
+      color: white;
+      /*margin: 0 auto;*/
+      width: 235px;
+    }
+    .request-form {
+      /*margin: 0 auto;*/
+    }
+    .form-field {
+      color: black;
+      border: black;
+      text-align: center;
+      /*border: 0px;*/
+      margin: 5px 0px 3px 0px;
+      height: 24px;
+      width: 198px;
+      border-radius: 5px;
+    }
+    .form-field-2 {
+      padding: 5px 0px 0px 0px;
+      color: black;
+      text-align: center;
+      /*border: 0px;*/
+      margin: 5px 0px 0px 0px;
+      height: 20px;
+      width: 200px;
+      border-radius: 5px;
+    }
+    .form-button {
+      color: black;
+      text-align: center;
+      /*border: 0px;*/
+      margin: 5px 0px 0px 1px;
+      height: 25px;
+      width: 200px;
+      border-radius: 5px;
+    }
+    .request-title {
+      font-size: 25px;
+      padding: 15px 0px 15px 0px;
+    }
+    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+     color:    black;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+       color:    black;
+       opacity:  1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+       color:    black;
+       opacity:  1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+       color:    black;
+    }
+    :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+      color:    black;
+    }
 	</style>
 </head>
 
