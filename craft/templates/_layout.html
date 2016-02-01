@@ -160,6 +160,25 @@
       color: white;
       margin: auto;
     }
+    .prices-holder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .pricing-box-1 {
+      display: inline-block;
+      border: 3px solid grey;
+      color: grey;
+      margin: 0px 15px 0px 0px;
+      padding: 15px 100px 15px 100px;
+    }
+    .pricing-box-2 {
+      padding: 15px 100px 15px 100px;
+      display: inline-block;
+      border: 3px solid #72bcd4;
+      color: #72bcd4;
+      margin: 0px 0px 0px 15px;
+    }
     .solutionpage-top {
       /*margin: 0 auto;*/
       width: 100%;
@@ -168,6 +187,16 @@
       background-size: cover;
       color: white;
       margin: auto;
+    }
+    .pricingpage-top {
+      /*margin: 0 auto;*/
+      width: 100%;
+      height: 100%;
+      background-image: url('https://paradata.herokuapp.com/images/cash.jpg');
+      background-size: cover;
+      color: white;
+      margin: auto;
+      padding: 0px 0px 10px 0px;
     }
     .homepage-top-inner {
       height: 100%;
@@ -273,6 +302,11 @@
       width: 100%;
       color: black;
     }
+    .prices-middle {
+      padding: 15px 0px 15px 0px;
+      width: 100%;
+      color: black;
+    }
     .homepage-middle-inner {
       height: 100%;
       width: 80%;
@@ -311,7 +345,30 @@
       justify-content: center;
       align-items: center;
       padding: 15px 0px 15px 0px;
-
+    }
+    .price-title {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 0px 15px 0px;
+    }
+    .price-data {
+      display: inline-block;
+    }
+    .dollar-sign {
+      font-size: 25px;
+      display: inline-block;
+      vertical-align:top;
+      padding: 20px 0px 0px 0px;
+    }
+    .price-number {
+      display: inline-block;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      padding: 15px 0px 15px 0px;
     }
     .homepage-bottom-title {
       font-size: 25px;
@@ -433,7 +490,7 @@
             </div>
           </a>
 
-          <a href="{{ url('solutions') }}" {% if craft.request.firstSegment == 'NEWS' %}
+          <a href="{{ url('pricing') }}" {% if craft.request.firstSegment == 'PRICING' %}
              class="header-link"{% endif %}>
             <div class="header-link">
               PRICING

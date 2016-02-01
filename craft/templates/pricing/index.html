@@ -1,0 +1,66 @@
+{% extends "_layout" %}
+{% set title = "Solutions" %}
+
+{% block content %}
+
+	<div class="pricingpage-top">
+		<div class="homepage-top-inner">
+			<div class="home-title">
+				PRICING
+			</div>
+		</div>
+	</div>
+
+	<div class="prices-middle">
+		<div class="solutionpage-middle-inner">
+			<div class="prices-holder">
+				<div class="pricing-box-1">
+					{% for entry in craft.entries.section('pricing').title("1 YEAR PLAN") %}
+						<div class="price-title" style="font-size: 25px;">
+							{{ entry.title }}
+						</div>
+						<div>
+							<div class="dollar-sign">
+								$
+							</div>
+							<div class="price-number">
+								{{ entry.body }}
+							</div>
+							<div class="price-data">
+								/ BOM / MO
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="pricing-box-2">
+					{% for entry in craft.entries.section('pricing').title("3 YEAR PLAN") %}
+						<div class="price-title" style="font-size: 25px;">
+							{{ entry.title }}
+						</div>
+						<div>
+							<div class="dollar-sign">
+								$
+							</div>
+							<div class="price-number">
+								{{ entry.body }}
+							</div>
+							<div class="price-data">
+								/ BOM / MO
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="solution-bottom">
+		<div class="learn-button">
+			<a href="https://paradata.herokuapp.com/scorerequest"
+				 style="color: black;">
+				SCHEDULE A DEMO
+			</a>
+		</div>
+	</div>
+
+{% endblock %}
