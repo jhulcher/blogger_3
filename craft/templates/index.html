@@ -7,20 +7,27 @@
 
       <div class="homepage-top">
         <div class="homepage-top-inner">
-          <div>
+          <div class="home-title">
       			{{ entry.title }}
           </div>
 
-          <div>
-            {% for image in entry.image %}
-              <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-            {% endfor %}
-          </div>
+					<div class="home-top-body">
+	          <div class="home-top-image">
+	            {% for image in entry.image %}
+	              <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+	            {% endfor %}
+	          </div>
 
-          <div>
-            {{ entry.body }}
-          </div>
-
+	          <div class="home-top-text">
+	            {{ entry.body }}
+							<div class="score-button">
+								<a href="https://paradata.herokuapp.com/scorerequest"
+									 style="color: black;">
+									 What's Your Score?
+								</a>
+							</div>
+	          </div>
+					</div>
         </div>
       </div>
 
@@ -28,22 +35,32 @@
 
     <div class="homepage-middle">
       <div class="homepage-middle-inner">
+				<div class="homepage-middle-title">
+        	PARADATA DELIVERS
+				</div>
+				<div>
+	        {% for entry in craft.entries.section('homepagemiddle').order('lft desc').limit(3).find() %}
 
-        PARADATA DELIVERS
+	              <div class="homepage-middle-list">
+									<div class="home-middle-num">
+	                	{{ entry.title }}
+									</div>
+	              </div>
 
-        {% for entry in craft.entries.section('homepagemiddle').order('lft desc').limit(3).find() %}
+	              <div class="homepage-middle-list">
+	                {{ entry.body }}
+	              </div>
 
-              <div>
-                {{ entry.title }}
-              </div>
-
-              <div>
-                {{ entry.body }}
-              </div>
-
-        {% endfor %}
-
-        LINK GOES HERE
+	        {% endfor %}
+				</div>
+				<div class="homepage-middle-list">
+					<div class="learn-button">
+						<a href="https://paradata.herokuapp.com/scorerequest"
+							 style="color: black;">
+	        		LEARN MORE
+						</a>
+					</div>
+				</div>
       </div>
 
     </div>
@@ -52,25 +69,29 @@
       <div class="homepage-bottom-inner">
         {% for entry in craft.entries.section('homepagebottom').limit(1).find() %}
           <div class="homepage-bottom-text">
-            <div>
+            <div class="homepage-bottom-title">
               {{ entry.title }}
             </div>
 
             <div>
               {{ entry.body }}
             </div>
+
+						<div class="score-button">
+							<a href="https://paradata.herokuapp.com/scorerequest"
+								 style="color: black;">
+								 Schedule a Demo
+							</a>
+						</div>
           </div>
+
           <div class="homepage-bottom-image">
             {% for image in entry.image %}
               <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
             {% endfor %}
           </div>
         {% endfor %}
-
-        LINK GOES HERE
-
       </div>
-
 
     </div>
 

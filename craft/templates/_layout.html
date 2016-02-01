@@ -53,6 +53,7 @@
       color: #0ae0ff;
     }
     body {
+      font-family: "Helvetica Neue";
       height: 100%;
       background-color: #2a2a2a;
     }
@@ -156,11 +157,81 @@
       background-image: url('https://paradata.herokuapp.com/images/electronics.jpg');
       background-size: cover;
       color: white;
+      margin: auto;
     }
     .homepage-top-inner {
       height: 100%;
       width: 80%;
-      margin: 0 auto;
+      margin: auto;
+    }
+    .score-button {
+      background-color: white;
+      border-radius: 20px;
+      height: 40px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      margin: 25px 0px 0px 0px;
+    }
+    .score-button:hover {
+      background-color: #00FA9A;
+    }
+    .home-middle-num {
+      background-color: #ADD8E6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      margin: 0px 0px 20px 0px;
+    }
+    .homepage-bottom-image {
+      display: inline-block;
+      padding: 0px 0px 0px 20px;
+    }
+    .homepage-bottom-text {
+      display: inline-block;
+    }
+    .learn-button {
+      background-color: #ADD8E6;
+      border-radius: 20px;
+      height: 40px;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      margin: 20px 0px 30px 0px;
+    }
+    .learn-button:hover {
+      background-color: #00FA9A;
+    }
+    .home-title {
+      font-family: "Helvetica Neue";
+      font-size: 40px;
+      width: 100%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 0px 50px 0px;
+    }
+    .home-top-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 0px 30px 0px;
+    }
+    .home-top-text {
+      padding: 0px 0px 0px 25px;
+      font-size: 20px;
+      width: 400px;
+    }
+    .home-top-image {
+      padding: 10px;
     }
     .homepage-middle {
       width: 100%;
@@ -170,16 +241,39 @@
       height: 100%;
       width: 80%;
       margin: 0 auto;
+
+    }
+    .homepage-middle-list {
+      display: flex;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+    }
+    .homepage-bottom-title {
+      font-size: 25px;
+      padding: 0px 0px 35px 0px;
+    }
+    .homepage-middle-title {
+      padding: 30px 0px 30px 0px;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .homepage-bottom {
       width: 100%;
       color: black;
-      background-color: #2a2a2a;
+      background-color: #ededed;
     }
     .homepage-bottom-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 100%;
       width: 80%;
       margin: 0 auto;
+      padding: 25px 0px 30px 0px;
     }
     .request-holder {
       background-color: #2a2a2a;
@@ -237,21 +331,21 @@
       font-size: 25px;
       padding: 15px 0px 15px 0px;
     }
-    ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    ::-webkit-input-placeholder {
      color:    black;
     }
-    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    :-moz-placeholder {
        color:    black;
        opacity:  1;
     }
-    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    ::-moz-placeholder {
        color:    black;
        opacity:  1;
     }
-    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    :-ms-input-placeholder {
        color:    black;
     }
-    :placeholder-shown { /* Standard (https://drafts.csswg.org/selectors-4/#placeholder) */
+    :placeholder-shown {
       color:    black;
     }
 	</style>
