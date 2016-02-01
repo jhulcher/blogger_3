@@ -411,22 +411,21 @@
         </h1>
 
   			<nav>
-          <a href="{{ url('news') }}" {% if craft.request.firstSegment == 'NEWS' %}
+          <a href="{{ url('solutions') }}" {% if craft.request.firstSegment == 'SOLUTIONS' %}
              class="header-link"{% endif %}>
             <div class="header-link">
               SOLUTIONS
             </div>
           </a>
 
-          <a href="{{ url('news') }}" {% if craft.request.firstSegment == 'NEWS' %}
+          <a href="{{ url('solutions') }}" {% if craft.request.firstSegment == 'NEWS' %}
              class="header-link"{% endif %}>
             <div class="header-link">
               PRICING
             </div>
           </a>
 
-          <a href="{{ url('pizza') }}" {% if craft.request.firstSegment == 'PIZZA' %}
-             class="header-link"{% endif %}>
+          <a href="https://paradata.herokuapp.com/admin" class="header-link">
             <div class="header-link">
               LOG IN
             </div>
