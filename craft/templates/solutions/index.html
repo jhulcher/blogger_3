@@ -1,0 +1,125 @@
+{% extends "_layout" %}
+{% set title = "Solutions" %}
+
+{% block content %}
+
+
+	{% for entry in craft.entries.section('solution').order('lft desc').limit(1).find() %}
+
+		<div class="solutionpage-top">
+			<div class="homepage-top-inner">
+				<div class="home-title">
+					{{ entry.title }}
+				</div>
+
+				<div class="home-top-body">
+					<div class="solution-top-text">
+						{{ entry.body }}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+
+	<div class="homepage-middle">
+		<div class="solutionpage-middle-inner">
+			<div>
+				{% for entry in craft.entries.section('solution').title("PARADATA ENABLES SUPPLY CHAIN OPTIMIZATION") %}
+					<div class="solutionpage-middle-list" style="font-size: 25px;">
+						{{ entry.title }}
+					</div>
+
+					<div class="solutionpage-middle-list">
+						{{ entry.body }}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+
+	<div class="solutionpage-middle">
+		<div class="homepage-middle-inner">
+			<div>
+				{% for entry in craft.entries.section('solution').title("HOW DOES PARADATA WORK?") %}
+					<div class="homepage-middle-list">
+							{{ entry.title }}
+					</div>
+
+					<div class="homepage-middle-list">
+						{{ entry.body }}
+					</div>
+				{% endfor %}
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+<div class="solutionpage-middle">
+	<div class="homepage-middle-inner">
+		<div class="homepage-middle-title">
+			PARADATA DELIVERS
+		</div>
+		<div>
+			{% for entry in craft.entries.section('homepagemiddle').order('lft desc').limit(3).find() %}
+
+						<div class="homepage-middle-list">
+							<div class="home-middle-num">
+								{{ entry.title }}
+							</div>
+						</div>
+
+						<div class="homepage-middle-list">
+							{{ entry.body }}
+						</div>
+
+			{% endfor %}
+		</div>
+		<div class="homepage-middle-list">
+			<div class="learn-button">
+				<a href="https://paradata.herokuapp.com/scorerequest"
+					 style="color: black;">
+					LEARN MORE
+				</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="homepage-bottom">
+	<div class="homepage-bottom-inner">
+		{% for entry in craft.entries.section('homepagebottom').limit(1).find() %}
+			<div class="homepage-bottom-text">
+				<div class="homepage-bottom-title">
+					{{ entry.title }}
+				</div>
+
+				<div>
+					{{ entry.body }}
+				</div>
+
+				<div class="score-button">
+					<a href="https://paradata.herokuapp.com/scorerequest"
+						 style="color: black;">
+						 Schedule a Demo
+					</a>
+				</div>
+			</div>
+
+			<div class="homepage-bottom-image">
+				{% for image in entry.image %}
+					<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+				{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+
+</div>
+
+{% endblock %}
