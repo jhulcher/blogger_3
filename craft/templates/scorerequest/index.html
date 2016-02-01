@@ -8,16 +8,19 @@
 	{% for entry in craft.entries.section('ScoreRequest').limit(1).find() %}
 
     <form method="post" action="" accept-charset="UTF-8">
-        <!-- <input type="hidden" name="redirect" value=""> -->
         <input type="hidden" name="action" value="entries/saveEntry">
         <input type="hidden" name="sectionId" value="{{ entry.sectionId }}">
-        <input id="title" type="text" name="title">
-        <!-- <input type="hidden" name="enabled" value="4"> -->
 
-        <!-- <textarea id="email" name="fields[email]"></textarea> -->
-        
-        <textarea id="body" name="fields[email]"></textarea>
-        <textarea id="body" name="fields[body]"></textarea>
+        <div>
+          <input id="title" type="text" name="title">
+        </div>
+        <div>
+          <textarea id="body" name="fields[email]"></textarea>
+        </div>
+        <div>
+          <textarea id="body" name="fields[body]"></textarea>
+        </div>
+
         <input type="submit" value="Publish">
     </form>
 
