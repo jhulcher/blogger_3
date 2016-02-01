@@ -3,8 +3,7 @@
 
 {% block content %}
 
-
-		{% for entry in craft.entries.section('homepagetop').limit(1).find() %}
+		{% for entry in craft.entries.section('homepagetop').order('lft desc').limit(1).find() %}
 
       <div class="homepage-top">
         <div class="homepage-top-inner">
@@ -69,7 +68,9 @@
         {% endfor %}
 
         LINK GOES HERE
+
       </div>
+
 
     </div>
 
