@@ -6,11 +6,10 @@
 	<div class="solutionpage-top">
 		<div class="homepage-top-inner">
 			{% for entry in craft.entries.section('solution').order('lft desc').limit(1).find() %}
-				<div class="home-title">
+				<div class="solution-title">
 					{{ entry.title }}
 				</div>
-
-				<div class="home-top-body">
+				<div class="solution-top-body">
 					<div class="solution-top-text">
 						{{ entry.body }}
 					</div>
@@ -26,7 +25,6 @@
 					<div class="solutionpage-middle-list" style="font-size: 25px;">
 						{{ entry.title }}
 					</div>
-
 					<div class="solutionpage-middle-list">
 						{{ entry.body }}
 					</div>
@@ -35,7 +33,6 @@
 		</div>
 	</div>
 
-
 	<div class="solutionpage-middle">
 		<div class="homepage-middle-inner">
 			<div>
@@ -43,7 +40,6 @@
 					<div class="solutionpage-middle-list" style="font-size: 25px;">
 							{{ entry.title }}
 					</div>
-
 					<div class="solutionpage-middle-list">
 						{{ entry.body }}
 					</div>
@@ -55,7 +51,6 @@
 	<div class="homepage-middle">
 		<div class="homepage-bottom-inner">
 			{% for entry in craft.entries.section('solution').title("1") %}
-
 				<div class="homepage-bottom-text">
 					<div class="homepage-middle-list">
 						<div class="home-middle-num">
@@ -66,13 +61,11 @@
 						{{ entry.body }}
 					</div>
 				</div>
-
 				<div class="homepage-bottom-image">
 					{% for image in entry.image %}
 						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
 					{% endfor %}
 				</div>
-
 			{% endfor %}
 		</div>
 	</div>
@@ -80,7 +73,6 @@
 	<div class="homepage-bottom">
 		<div class="homepage-bottom-inner">
 			{% for entry in craft.entries.section('solution').title("2") %}
-
 				<div class="homepage-bottom-text">
 					<div class="homepage-middle-list">
 						<div class="home-middle-num">
@@ -91,13 +83,11 @@
 						{{ entry.body }}
 					</div>
 				</div>
-
 				<div class="homepage-bottom-image">
 					{% for image in entry.image %}
 						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
 					{% endfor %}
 				</div>
-
 			{% endfor %}
 		</div>
 	</div>
@@ -105,7 +95,6 @@
 	<div class="homepage-middle">
 		<div class="homepage-bottom-inner">
 			{% for entry in craft.entries.section('solution').title("3") %}
-
 				<div class="homepage-bottom-text">
 					<div class="homepage-middle-list">
 						<div class="home-middle-num">
@@ -116,13 +105,11 @@
 						{{ entry.body }}
 					</div>
 				</div>
-
 				<div class="homepage-bottom-image">
 					{% for image in entry.image %}
 						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
 					{% endfor %}
 				</div>
-
 			{% endfor %}
 		</div>
 	</div>

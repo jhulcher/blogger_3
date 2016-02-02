@@ -4,12 +4,12 @@
 {% block content %}
 
 	<div class="companypage-top">
-		<div class="homepage-top-inner">
+		<div class="solution-top-inner">
 			{% for entry in craft.entries.section('company').title("company") %}
-				<div class="home-title">
+				<div class="company-title">
 					{{ entry.title }}
 				</div>
-				<div class="home-top-body">
+				<div class="solution-top-body">
 					<div class="solution-top-text">
 						{{ entry.body }}
 					</div>
@@ -103,21 +103,23 @@
 			<div class="employees-title" style="font-size: 25px;">
 				MEET OUR TEAM
 			</div>
-				{% for entry in craft.entries.section('employees').order('lft desc').find() %}
-					<div class="employees-holder">
-						<div>
-							{% for image in entry.image %}
-								<img class="employee-image" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-							{% endfor %}
+			{% for entry in craft.entries.section('employees').order('lft desc').find() %}
+				<div class="employees-holder">
+					<div>
+						{% for image in entry.image %}
+							<img class="employee-image" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+						{% endfor %}
+					</div>
+					<div class="employee-body">
+						<div class="employee-title">
+							{{ entry.title }}
 						</div>
-						<div class="employee-body">
-							<div class="employee-title">
-								{{ entry.title }}
-							</div>
+						<div class="employee-text">
 							{{ entry.body }}
 						</div>
 					</div>
-				{% endfor %}
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 
