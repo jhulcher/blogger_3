@@ -330,6 +330,13 @@
     padding: 60px 0px 50px 0px;
     text-shadow: 1px 1px 1px black;
   }
+  .pricing-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 45px;
+    width: 100%;
+    padding: 60px 0px 50px 0px;
+    text-shadow: 1px 1px 1px black;
+  }
   .solution-title {
     font-family: 'Quicksand', sans-serif;
     font-size: 45px;
@@ -378,6 +385,10 @@
     padding: 0px 0px 0px 25px;
     font-size: 20px;
     width: 400px;
+  }
+  .home-text-body {
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
   }
   .employee-body {
     padding: 0px 0px 0px 25px;
