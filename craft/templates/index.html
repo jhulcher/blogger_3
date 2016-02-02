@@ -38,17 +38,15 @@
 				</div>
 				<div>
 	        {% for entry in craft.entries.section('homepagemiddle').order('lft desc').limit(3).find() %}
+            <div class="homepage-middle-list">
+							<div class="home-middle-num">
+              	{{ entry.title }}
+							</div>
+            </div>
 
-	              <div class="homepage-middle-list">
-									<div class="home-middle-num">
-	                	{{ entry.title }}
-									</div>
-	              </div>
-
-	              <div class="homepage-middle-list">
-	                {{ entry.body }}
-	              </div>
-
+            <div class="homepage-middle-list">
+              {{ entry.body }}
+            </div>
 	        {% endfor %}
 				</div>
 				<div class="homepage-middle-list">
@@ -70,11 +68,9 @@
             <div class="homepage-bottom-title">
               {{ entry.title }}
             </div>
-
             <div>
               {{ entry.body }}
             </div>
-
 						<div class="schedule-button">
 							<a href="https://paradata.herokuapp.com/scorerequest"
 								 style="color: black;">
@@ -82,7 +78,6 @@
 							</a>
 						</div>
           </div>
-
           <div class="homepage-bottom-image">
             {% for image in entry.image %}
               <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
@@ -90,7 +85,6 @@
           </div>
         {% endfor %}
       </div>
-
     </div>
 
 
