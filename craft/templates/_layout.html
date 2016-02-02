@@ -12,562 +12,22 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
   <head>
+
   	<meta charset="utf-8" />
-  	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+
+  	<title>
+      {% if title is defined %}{{ title }} - {% endif %}{{ siteName }}
+    </title>
+
   	<link rel="home" href="{{ siteUrl }}" />
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="http://paradata.herokuapp.com/styles/style.css" rel="stylesheet" type="style/css">
 
-  	<style type="text/css">
-
-      /*css reset here*/
-      html, body, div, span, applet, object, iframe,
-      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-      a, abbr, acronym, address, big, cite, code,
-      del, dfn, em, img, ins, kbd, q, s, samp,
-      small, strike, strong, sub, sup, tt, var,
-      b, u, i, center, dl, dt, dd, ol, ul, li,
-      fieldset, form, label, legend,
-      table, caption, tbody, tfoot, thead, tr, th, td,
-      article, aside, canvas, details, embed,
-      figure, figcaption, footer, header, hgroup,
-      menu, nav, output, ruby, section, summary,
-      time, mark, audio, video {margin: 0; padding: 0; border: 0;
-      	font-size: 100%; font: inherit; vertical-align: baseline;}
-      article, aside, details, figcaption, figure,
-      footer, header, hgroup, menu, nav, section {display: block;}
-      body {line-height: 1;}
-      ol, ul {list-style: none;}
-      blockquote, q {quotes: none;}
-      blockquote:before, blockquote:after,
-      q:before, q:after {content: '';content: none;}
-      table {border-collapse: collapse;border-spacing: 0;}
-  		body {font-family: "Helvetica Neue";background: black;height: 100%;border-width: 0;}
-      a {text-decoration: none;}
-
-      /*my css starts here*/
-      p {
-        padding: 0px 0px 15px 0px;
-        line-height: 1.25;
-        font-family: "Helvetica Neue";
-      }
-      .text-link:hover {
-        color: #0ae0ff;
-      }
-      body {
-        font-family: "Helvetica Neue";
-        height: 100%;
-        background-color: #2a2a2a;
-      }
-  		#container {
-        border-width: 0;
-        margin: 0 auto;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        position: relative;
-        vertical-align: top;
-        background-color: #2a2a2a;
-        font-family: "Helvetica Neue";
-  			/*-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  			        box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/
-  		}
-      div {
-        font-family: "Helvetica Neue";
-        height: 100%;
-      }
-
-      .header-container {
-        width: 100%;
-        background-color: #2a2a2a;
-        top: 0;
-        /*position: fixed;*/
-      }
-
-      .content-container {
-        overflow: scroll;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        position: relative;
-        overflow-y: scroll;
-        margin: 0 auto;
-      }
-      .stripes {
-        /*background-color: green;*/
-        background-image: url("https://paradata.herokuapp.com/images/texture_tile-bg.png");
-      }
-  		#header, #footer { display: block; color: #fff; width: 80%; margin: 0 auto;}
-  		#header a, #footer a { color: #fff; }
-  		#header {
-        /*border-radius: 7px 7px 0 0; */
-        height: 100%;
-        top: 0;
-        padding: 25px 0px 15px 0px;
-        margin: 0 auto;
-      }
-      .footer-top {
-        width: 100%;
-        background-color: #2a2a2a;
-      }
-      main {height: 100%; width: 100%; margin: 0 auto;}
-  		#header:after { content: '.'; display: block; height: 0; clear: both; visibility: hidden; }
-  		#header a { text-decoration: none; }
-  		#header h1 { float: left; margin: 0 auto; font-size: 20px; line-height: 1; }
-  		#header nav { display: block; float: right; padding: 6px 0px 0px 0px; font-size: 10px;}
-  		#header nav ul { margin: 0 auto; list-style-type: none; }
-  		#header nav ul li { float: left; margin-left: 0px; }
-  		#header nav ul li a { display: block; margin: 0 auto; line-height: 22px; }
-  		/*#header nav ul li a:hover,*/
-  		/*#header nav ul li a.active { border-bottom: 2px solid #fff; }*/
-
-  		#content { height: 100%; display: block; background: #fff; }
-  		#content h1 { margin-top: 0; }
-  		#content a { color: #da5a47; text-decoration: none; }
-  		/*#content a:hover { text-decoration: underline; }*/
-  		#footer {
-        /*border-radius: 0 0 7px 7px; */
-        padding: 15px; font-size: 12px; text-align: center; }
-      .address {
-        text-align: left;
-        font-size: 20px;
-        display: inline-block;
-      }
-      .company-text {
-        float: left;
-        padding: 0px 180px 0px 0px;
-      }
-      .icon {
-        width: 40px;
-        border-radius: 7px;
-      }
-      .title {
-        width: 220px;
-        height: 44px;
-        background:transparent url('https://paradata.herokuapp.com/images/paradata-logo.png') center top no-repeat;
-      }
-      .title:hover {
-        width: 220px;
-        height: 44px;
-        background-image: url('https://paradata.herokuapp.com/images/paradata-logo-alt.png');
-      }
-      .header-link { padding: 10px; color: white; font-size: 20px; display: inline;}
-      .header-link:hover {color: #0ae0ff; height: 100%;}
-      .homepage-top {
-        width: 100%;
-        height: 100%;
-        background-image: url('https://paradata.herokuapp.com/images/electronics.jpg');
-        background-size: cover;
-        color: white;
-        margin: auto;
-      }
-      .prices-holder {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .pricing-box-1 {
-        display: inline-block;
-        border: 3px solid grey;
-        color: grey;
-        margin: 0px 15px 0px 0px;
-        padding: 15px 100px 15px 100px;
-      }
-      .pricing-box-2 {
-        padding: 15px 100px 15px 100px;
-        display: inline-block;
-        border: 3px solid #72bcd4;
-        color: #72bcd4;
-        margin: 0px 0px 0px 15px;
-      }
-      .solutionpage-top {
-        width: 100%;
-        height: 100%;
-        background-image: url('https://paradata.herokuapp.com/images/nightsky.jpg');
-        background-size: cover;
-        color: white;
-        margin: auto;
-      }
-      .companypage-top {
-        width: 100%;
-        height: 100%;
-        background-image: url('https://paradata.herokuapp.com/images/company.jpg');
-        background-size: cover;
-        color: white;
-        margin: auto;
-      }
-      .pricingpage-top {
-        width: 100%;
-        height: 100%;
-        background-image: url('https://paradata.herokuapp.com/images/cash.jpg');
-        background-size: cover;
-        color: white;
-        margin: auto;
-        padding: 0px 0px 10px 0px;
-      }
-      .homepage-top-inner {
-        height: 100%;
-        width: 80%;
-        margin: auto;
-      }
-      .solution-top-inner {
-        height: 100%;
-        width: 80%;
-        margin: auto;
-      }
-      .score-button {
-        background-color: white;
-        border-radius: 20px;
-        height: 40px;
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #ffffff;
-        margin: 25px 0px 0px 0px;
-      }
-      .score-button:hover {
-        background-color: #00FA9A;
-      }
-      .schedule-button {
-        background-color: #ADD8E6;
-        border-radius: 20px;
-        height: 40px;
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #ffffff;
-        margin: 25px 0px 0px 0px;
-      }
-      .bythenumbers-text {
-        display: inline-block;
-        width: 30%;
-      }
-      .company-photos {
-        display: inline-block;
-        width: 24%;
-      }
-      .bythenumbers-image-holder {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        padding: 25px 0px 15px 0px;
-      }
-      .company-photo-holder {
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        padding: 25px 0px 15px 0px;
-      }
-      .bythenumbers-image {
-        width: 60px;
-      }
-      .company-photo {
-        width: 200px;
-        border: solid 2px white;
-        margin: 0px 15px 0px 15px;
-        box-shadow: 1px 1px 1px grey;
-      }
-      .schedule-button:hover {
-        background-color: #00FA9A;
-      }
-      .video-holder {
-        width: 500px;
-      }
-      .solution-list-text {
-        width: 350px;
-        line-height: 1.25;
-      }
-      .location-text {
-        color: black;
-        font-size: 20px;
-        width: 350px;
-        line-height: 1.25;
-      }
-      .home-middle-num {
-        background-color: #ADD8E6;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        border-radius: 15px;
-        margin: 0px 0px 20px 0px;
-      }
-      .homepage-bottom-image {
-        display: inline-block;
-        padding: 0px 0px 0px 20px;
-      }
-      .homepage-bottom-text {
-        display: inline-block;
-      }
-      .learn-button {
-        background-color: #ADD8E6;
-        border-radius: 20px;
-        height: 40px;
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #ffffff;
-        margin: 20px 0px 30px 0px;
-      }
-      .learn-button:hover {
-        background-color: #00FA9A;
-      }
-      .home-title {
-        font-family: "Helvetica Neue";
-        font-size: 40px;
-        width: 100%;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 60px 0px 50px 0px;
-        text-shadow: 1px 1px 1px black;
-      }
-      .solution-title {
-        font-family: "Helvetica Neue";
-        font-size: 45px;
-        width: 100%;
-        padding: 60px 0px 50px 0px;
-        text-shadow: 1px 1px 1px black;
-      }
-      .company-title {
-        font-family: "Helvetica Neue";
-        font-size: 45px;
-        width: 100%;
-        padding: 60px 0px 50px 0px;
-        text-shadow: 1px 1px 1px black;
-      }
-      .home-top-body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 0px 30px 0px;
-      }
-      .solution-top-body {
-        padding: 0px 0px 30px 0px;
-      }
-      .solution-top-body {
-        padding: 0px 0px 40px 0px;
-      }
-      .company-top-body {
-        font-family: "Helvetica Neue";
-        padding: 0px 0px 40px 0px;
-        text-shadow: 1px 1px 1px black;
-      }
-      .employee-title {
-        padding: 20px 0px 20px 0px;
-        font-size: 25px;
-        color: #0ae0ff;
-        text-shadow: 1px 1px 1px grey;
-      }
-      .employee-text {
-        font-size: 18px;
-      }
-      .employees-holder {
-        display: flex;
-        padding: 0px 0px 30px 0px;
-      }
-      .home-top-text {
-        padding: 0px 0px 0px 25px;
-        font-size: 20px;
-        width: 400px;
-      }
-      .employee-body {
-        padding: 0px 0px 0px 25px;
-        font-size: 20px;
-      }
-      .solution-top-text {
-        padding: 0px 0px 0px 0px;
-        font-size: 40px;
-        text-shadow: 1px 1px 1px black;
-      }
-      .home-top-image {
-        padding: 10px;
-      }
-      .employee-image {
-        padding: 5px;
-        width: 220px;
-        box-shadow: 1px 1px 1px grey;
-      }
-      .homepage-middle {
-        width: 100%;
-        color: black;
-      }
-      .prices-middle {
-        padding: 15px 0px 15px 0px;
-        width: 100%;
-        color: black;
-      }
-      .homepage-middle-inner {
-        height: 100%;
-        width: 80%;
-        margin: 0 auto;
-      }
-      .homepage-middle-list {
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        width: 400px;
-      }
-      .solution-bottom {
-        display: flex;
-        margin: 0 auto;
-        padding: 15px 0px 0px 0px;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        background-color: #f3f3f3;
-      }
-      .solutionpage-middle {
-        background-color: #ededed;
-        width: 100%;
-        color: black;
-      }
-      .solutionpage-middle-inner {
-        height: 100%;
-        width: 80%;
-        margin: 0 auto;
-        padding: 15px 0px 15px 0px;
-      }
-      .solutionpage-middle-list {
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        padding: 15px 0px 15px 0px;
-      }
-      .employees-title {
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        padding: 25px 0px 25px 0px;
-      }
-      .price-title {
-        display: flex;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        padding: 30px 0px 15px 0px;
-      }
-      .price-data {
-        display: inline-block;
-      }
-      .dollar-sign {
-        font-size: 25px;
-        display: inline-block;
-        vertical-align:top;
-        padding: 20px 0px 0px 0px;
-      }
-      .price-number {
-        display: inline-block;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
-        font-size: 60px;
-        padding: 15px 0px 15px 0px;
-      }
-      .homepage-bottom-title {
-        font-size: 25px;
-        padding: 0px 0px 35px 0px;
-      }
-      .homepage-middle-title {
-        padding: 30px 0px 30px 0px;
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .homepage-bottom {
-        width: 100%;
-        color: black;
-        background-color: #f3f3f3;
-      }
-      .homepage-bottom-inner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 80%;
-        margin: 0 auto;
-        padding: 25px 0px 30px 0px;
-      }
-      .request-holder {
-        background-color: #2a2a2a;
-        width: 100%;
-        height: 100%;
-        padding: 8% 0px 8% 0px;
-      }
-      .form-holder {
-        vertical-align: middle;
-        display: inline;
-        top: 50%;
-        position: relative;
-        bottom: 50%;
-        color: white;
-        width: 235px;
-      }
-      .request-form {
-        /*margin: 0 auto;*/
-      }
-      .form-field {
-        color: black;
-        border: black;
-        text-align: center;
-        margin: 5px 0px 3px 0px;
-        height: 24px;
-        width: 198px;
-        border-radius: 5px;
-      }
-      .form-field-2 {
-        padding: 5px 0px 0px 0px;
-        color: black;
-        text-align: center;
-        margin: 5px 0px 0px 0px;
-        height: 20px;
-        width: 200px;
-        border-radius: 5px;
-      }
-      .form-button {
-        color: black;
-        text-align: center;
-        margin: 5px 0px 0px 1px;
-        height: 25px;
-        width: 200px;
-        border-radius: 5px;
-      }
-      .request-title {
-        font-size: 25px;
-        padding: 15px 0px 15px 0px;
-      }
-      ::-webkit-input-placeholder {
-       color:    black;
-      }
-      :-moz-placeholder {
-         color:    black;
-         opacity:  1;
-      }
-      ::-moz-placeholder {
-         color:    black;
-         opacity:  1;
-      }
-      :-ms-input-placeholder {
-         color:    black;
-      }
-      :placeholder-shown {
-        color:    black;
-      }
-  	</style>
   </head>
 
   <body>
-  	<div id="container">
 
+  	<div id="container">
       <div class="header-container stripes">
     		<header id="header">
     			<h1>
@@ -575,7 +35,6 @@
               <div class="title"></div>
             </a>
           </h1>
-
     			<nav>
             <a href="{{ url('solutions') }}" {% if craft.request.firstSegment == 'SOLUTIONS' %}
                class="header-link"{% endif %}>
@@ -583,21 +42,18 @@
                 SOLUTIONS
               </div>
             </a>
-
             <a href="{{ url('pricing') }}" {% if craft.request.firstSegment == 'PRICING' %}
                class="header-link"{% endif %}>
               <div class="header-link">
                 PRICING
               </div>
             </a>
-
             <a href="https://paradata.herokuapp.com/admin" class="header-link">
               <div class="header-link">
                 LOG IN
               </div>
             </a>
     			</nav>
-
     		</header>
       </div>
 
@@ -613,9 +69,11 @@
         <div class="stripes">
       		<footer id="footer">
             <div class="address company-text">
-              <p>
-                COMPANY
-              </p>
+              <a href="http://paradata.herokuapp.com/company">
+                <p class="text-link">
+                  COMPANY
+                </p>
+              </a>
               <p>
                 CAREERS
               </p>
@@ -634,7 +92,6 @@
                 <img class="icon" src="https://paradata.herokuapp.com/images/linkedin.png">
               </a>
             </div>
-
             <div class="address">
               <a href="https://goo.gl/maps/zLEQikvsJxQ2">
                 <p class="text-link">
@@ -642,9 +99,10 @@
                   200 North Almaden Blvd #250<br />
                   San Jose, CA 95110
                 </p>
-                <p>
-                  408-791-2070
-                </p>
+              </a>
+              <p>
+                408-791-2070
+              </p>
               <a href="mailto:info@paradata.io">
                 <p class="text-link">
                   info@paradata.io
@@ -657,7 +115,8 @@
           © 2016 • ALL RIGHTS RESERVED • PRIVACY POLICY
     		</footer>
       </div>
-
   	</div>
+
   </body>
+
 </html>
