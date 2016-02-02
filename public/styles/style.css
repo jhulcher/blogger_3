@@ -166,7 +166,7 @@
     width: 180px;
   }
   .price-inner-right {
-    width: 160px;    
+    width: 160px;
     padding: 0px 17.5px 0px 17.5px;
   }
   .solutionpage-top {
@@ -181,6 +181,14 @@
     width: 100%;
     height: 100%;
     background-image: url('https://paradata.herokuapp.com/images/company.jpg');
+    background-size: cover;
+    color: white;
+    margin: auto;
+  }
+  .careerspage-top {
+    width: 100%;
+    height: 100%;
+    background-image: url('https://paradata.herokuapp.com/images/row_crew.jpg');
     background-size: cover;
     color: white;
     margin: auto;
@@ -434,6 +442,9 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
+    padding: 15px 0px 15px 0px;
+  }
+  .careerspage-middle-list {
     padding: 15px 0px 15px 0px;
   }
   .employees-title {

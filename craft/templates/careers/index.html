@@ -3,7 +3,7 @@
 
 {% block content %}
 
-	<div class="companypage-top">
+	<div class="careerspage-top">
 		<div class="solution-top-inner">
 			{% for entry in craft.entries.section('company').title("company") %}
 				<div class="company-title">
@@ -21,17 +21,79 @@
 	<div class="homepage-middle">
 		<div class="solutionpage-middle-inner">
 			<div>
-				{% for entry in craft.entries.section('company').title("ABOUT PARADATA") %}
+				{% for entry in craft.entries.section('careers').title("WORKING AT PARADATA") %}
 					<div class="solutionpage-middle-list" style="font-size: 25px;">
 						{{ entry.title }}
 					</div>
-					<div class="solutionpage-middle-list">
+					<div class="careerspage-middle-list">
 						{{ entry.body }}
 					</div>
 				{% endfor %}
 			</div>
 		</div>
 	</div>
+
+	<div class="homepage-bottom">
+		<div class="homepage-bottom-inner">
+				<div class="solutionpage-middle-list">
+					{% for entry in craft.entries.section('careers').title("Careers Image 1") %}
+						{% for image in entry.image %}
+
+							<!-- <img src="http://paradata.herokuapp.com/images/careers.png"> -->
+							<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+
+						{% endfor %}
+					{% endfor %}
+				</div>
+		</div>
+	</div>
+
+	<div class="homepage-middle">
+		<div class="solutionpage-middle-inner">
+			<div>
+				{% for entry in craft.entries.section('careers').title("GET INVOLVED WITH:") %}
+					<div class="solutionpage-middle-list" style="font-size: 25px;">
+						{{ entry.title }}
+					</div>
+					<div class="careerspage-middle-list">
+						{{ entry.body }}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+	<div class="homepage-bottom">
+		<div class="homepage-bottom-inner">
+				<div class="solutionpage-middle-list">
+					{% for entry in craft.entries.section('careers').title("Careers Image 2") %}
+						{% for image in entry.image %}
+
+							<!-- <img src="http://paradata.herokuapp.com/images/careers.png"> -->
+							<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+
+						{% endfor %}
+					{% endfor %}
+				</div>
+		</div>
+	</div>
+
+	<div class="homepage-middle">
+		<div class="solutionpage-middle-inner">
+			<div>
+				{% for entry in craft.entries.section('careers').title("ENJOY A WIDE RANGE OF BENEFITS:") %}
+					<div class="solutionpage-middle-list" style="font-size: 25px;">
+						{{ entry.title }}
+					</div>
+					<div class="careerspage-middle-list">
+						{{ entry.body }}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+
+
 
 	<div class="homepage-bottom">
 		<div class="homepage-bottom-inner">
@@ -74,29 +136,7 @@
 		</div>
 	</div>
 
-	<div class="homepage-bottom">
-		<div class="homepage-bottom-inner">
-			<div>
-				<div class="solutionpage-middle-list">
-					<img src="http://paradata.herokuapp.com/images/company1.png">
-				</div>
-				<center>
-					{% for entry in craft.entries.section('companyphoto').order('lft desc').limit(4).find() %}
-						<div class="company-photos">
-							{% for image in entry.image %}
-								<div class="company-photo-holder">
-									<img class="company-photo" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-								</div>
-							{% endfor %}
-							<div>
-								{{ entry.body }}
-							</div>
-						</div>
-					{% endfor %}
-				</center>
-			</div>
-		</div>
-	</div>
+
 
 	<div class="homepage-middle">
 		<div class="solutionpage-middle-inner">
