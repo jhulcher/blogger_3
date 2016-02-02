@@ -567,7 +567,7 @@
     font-size: 25px;
     padding: 15px 0px 15px 0px;
   }
-  ::-webkit-input-placeholder {
+  /*::-webkit-input-placeholder {
    color:    black;
   }
   :-moz-placeholder {
@@ -583,4 +583,4 @@
   }
   :placeholder-shown {
     color:    black;
-  }
+  }*/
