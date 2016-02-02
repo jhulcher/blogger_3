@@ -393,7 +393,7 @@
   }
   .employee-image {
     padding: 5px;
-    width: 220px;
+    width: 100%;
     box-shadow: 1px 1px 1px grey;
   }
   .homepage-middle {
