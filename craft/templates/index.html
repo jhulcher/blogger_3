@@ -10,14 +10,12 @@
           <div class="home-title">
       			{{ entry.title }}
           </div>
-
 					<div class="home-top-body">
 	          <div class="home-top-image">
 	            {% for image in entry.image %}
 	              <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
 	            {% endfor %}
 	          </div>
-
 	          <div class="home-top-text">
 	            {{ entry.body }}
 							<div class="score-button">

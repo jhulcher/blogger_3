@@ -3,13 +3,12 @@
 
 {% block content %}
 
-	<div class="solutionpage-top">
+	<div class="companypage-top">
 		<div class="homepage-top-inner">
-			{% for entry in craft.entries.section('solution').order('lft desc').limit(1).find() %}
+			{% for entry in craft.entries.section('company').title("company") %}
 				<div class="home-title">
 					{{ entry.title }}
 				</div>
-
 				<div class="home-top-body">
 					<div class="solution-top-text">
 						{{ entry.body }}
@@ -22,108 +21,103 @@
 	<div class="homepage-middle">
 		<div class="solutionpage-middle-inner">
 			<div>
-				{% for entry in craft.entries.section('solution').title("PARADATA ENABLES SUPPLY CHAIN OPTIMIZATION") %}
+				{% for entry in craft.entries.section('company').title("ABOUT PARADATA") %}
 					<div class="solutionpage-middle-list" style="font-size: 25px;">
 						{{ entry.title }}
 					</div>
-
 					<div class="solutionpage-middle-list">
 						{{ entry.body }}
 					</div>
 				{% endfor %}
 			</div>
-		</div>
-	</div>
-
-
-	<div class="solutionpage-middle">
-		<div class="homepage-middle-inner">
-			<div>
-				{% for entry in craft.entries.section('solution').title("HOW DOES PARADATA WORK?") %}
-					<div class="solutionpage-middle-list" style="font-size: 25px;">
-							{{ entry.title }}
-					</div>
-
-					<div class="solutionpage-middle-list">
-						{{ entry.body }}
-					</div>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-
-	<div class="homepage-middle">
-		<div class="homepage-bottom-inner">
-			{% for entry in craft.entries.section('solution').title("1") %}
-
-				<div class="homepage-bottom-text">
-					<div class="homepage-middle-list">
-						<div class="home-middle-num">
-							{{ entry.title }}
-						</div>
-					</div>
-					<div class="solution-list-text">
-						{{ entry.body }}
-					</div>
-				</div>
-
-				<div class="homepage-bottom-image">
-					{% for image in entry.image %}
-						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-					{% endfor %}
-				</div>
-
-			{% endfor %}
 		</div>
 	</div>
 
 	<div class="homepage-bottom">
 		<div class="homepage-bottom-inner">
-			{% for entry in craft.entries.section('solution').title("2") %}
-
+			{% for entry in craft.entries.section('company').title("location") %}
 				<div class="homepage-bottom-text">
-					<div class="homepage-middle-list">
-						<div class="home-middle-num">
-							{{ entry.title }}
-						</div>
-					</div>
-					<div class="solution-list-text">
+					<div class="location-text">
 						{{ entry.body }}
 					</div>
 				</div>
-
 				<div class="homepage-bottom-image">
 					{% for image in entry.image %}
-						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+						<img style="width:500px;" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
 					{% endfor %}
 				</div>
-
 			{% endfor %}
 		</div>
 	</div>
 
 	<div class="homepage-middle">
-		<div class="homepage-bottom-inner">
-			{% for entry in craft.entries.section('solution').title("3") %}
+		<div class="solutionpage-middle-inner">
+			<div>
+				<div class="solutionpage-middle-list" style="font-size: 25px;">
+					PARADATA BY THE NUMBERS
+				</div>
+				<center>
+					{% for entry in craft.entries.section('bythenumbers').order('lft desc').limit(6).find() %}
+						<div class="bythenumbers-text">
+							{% for image in entry.image %}
+								<div class="bythenumbers-image-holder">
+									<img class="bythenumbers-image" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+								</div>
+							{% endfor %}
+							<div>
+								{{ entry.body }}
+							</div>
+						</div>
+					{% endfor %}
+				</center>
+			</div>
+		</div>
+	</div>
 
-				<div class="homepage-bottom-text">
-					<div class="homepage-middle-list">
-						<div class="home-middle-num">
-							{{ entry.title }}
+	<div class="homepage-bottom">
+		<div class="homepage-bottom-inner">
+			<div>
+				<div class="solutionpage-middle-list">
+					<img src="http://paradata.herokuapp.com/images/company1.png">
+				</div>
+				<center>
+					{% for entry in craft.entries.section('companyphoto').order('lft desc').limit(4).find() %}
+						<div class="company-photos">
+							{% for image in entry.image %}
+								<div class="company-photo-holder">
+									<img class="company-photo" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+								</div>
+							{% endfor %}
+							<div>
+								{{ entry.body }}
+							</div>
+						</div>
+					{% endfor %}
+				</center>
+			</div>
+		</div>
+	</div>
+
+	<div class="homepage-middle">
+		<div class="solutionpage-middle-inner">
+			<div class="employees-title" style="font-size: 25px;">
+				MEET OUR TEAM
+			</div>
+				{% for entry in craft.entries.section('employees').order('lft desc').find() %}
+					<div class="employees-holder">
+						<div>
+							{% for image in entry.image %}
+								<img class="employee-image" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+							{% endfor %}
+						</div>
+						<div class="employee-body">
+							<div class="employee-title">
+								{{ entry.title }}
+							</div>
+							{{ entry.body }}
 						</div>
 					</div>
-					<div class="solution-list-text">
-						{{ entry.body }}
-					</div>
-				</div>
-
-				<div class="homepage-bottom-image">
-					{% for image in entry.image %}
-						<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-					{% endfor %}
-				</div>
-
-			{% endfor %}
+				{% endfor %}
 		</div>
 	</div>
 
