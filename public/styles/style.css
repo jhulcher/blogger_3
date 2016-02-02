@@ -48,8 +48,6 @@
     vertical-align: top;
     background-color: #2a2a2a;
     font-family: 'Quicksand', sans-serif;
-    /*-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);*/
   }
   div {
     font-family: 'Quicksand', sans-serif;
@@ -60,7 +58,6 @@
     width: 100%;
     background-color: #2a2a2a;
     top: 0;
-    /*position: fixed;*/
   }
 
   .content-container {
@@ -73,7 +70,6 @@
     margin: 0 auto;
   }
   .stripes {
-    /*background-color: green;*/
     background-image: url("https://paradata.herokuapp.com/images/texture_tile-bg.png");
   }
   #header, #footer { display: block; color: #fff; width: 80%; margin: 0 auto;}
@@ -96,15 +92,11 @@
   #header nav ul { margin: 0 auto; list-style-type: none; }
   #header nav ul li { float: left; margin-left: 0px; }
   #header nav ul li a { display: block; margin: 0 auto; line-height: 22px; }
-  /*#header nav ul li a:hover,*/
-  /*#header nav ul li a.active { border-bottom: 2px solid #fff; }*/
 
   #content { height: 100%; display: block; background: #fff; }
   #content h1 { margin-top: 0; }
   #content a { color: #da5a47; text-decoration: none; }
-  /*#content a:hover { text-decoration: underline; }*/
   #footer {
-    /*border-radius: 0 0 7px 7px; */
     padding: 15px; font-size: 12px; text-align: center; }
   .address {
     text-align: left;
@@ -531,9 +523,6 @@
     color: white;
     width: 235px;
   }
-  .request-form {
-    /*margin: 0 auto;*/
-  }
   .form-field {
     color: black;
     border: black;
@@ -567,20 +556,3 @@
     font-size: 25px;
     padding: 15px 0px 15px 0px;
   }
-  /*::-webkit-input-placeholder {
-   color:    black;
-  }
-  :-moz-placeholder {
-     color:    black;
-     opacity:  1;
-  }
-  ::-moz-placeholder {
-     color:    black;
-     opacity:  1;
-  }
-  :-ms-input-placeholder {
-     color:    black;
-  }
-  :placeholder-shown {
-    color:    black;
-  }*/
