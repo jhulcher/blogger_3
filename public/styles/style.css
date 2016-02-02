@@ -380,6 +380,7 @@
     text-shadow: 1px 1px 1px black;
   }
   .employee-body {
+    width: 65%;
     padding: 0px 0px 0px 25px;
     font-size: 20px;
   }
@@ -393,7 +394,7 @@
   }
   .employee-image {
     padding: 5px;
-    width: 100%;
+    width: 220px;
     box-shadow: 1px 1px 1px grey;
   }
   .homepage-middle {
