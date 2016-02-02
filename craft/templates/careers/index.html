@@ -5,7 +5,7 @@
 
 	<div class="careerspage-top">
 		<div class="solution-top-inner">
-			{% for entry in craft.entries.section('company').title("company") %}
+			{% for entry in craft.entries.section('careers').title("CAREERS AT PARADATA") %}
 				<div class="company-title">
 					{{ entry.title }}
 				</div>
@@ -38,10 +38,7 @@
 				<div class="solutionpage-middle-list">
 					{% for entry in craft.entries.section('careers').title("Careers Image 1") %}
 						{% for image in entry.image %}
-
-							<!-- <img src="http://paradata.herokuapp.com/images/careers.png"> -->
 							<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-
 						{% endfor %}
 					{% endfor %}
 				</div>
@@ -68,10 +65,7 @@
 				<div class="solutionpage-middle-list">
 					{% for entry in craft.entries.section('careers').title("Careers Image 2") %}
 						{% for image in entry.image %}
-
-							<!-- <img src="http://paradata.herokuapp.com/images/careers.png"> -->
 							<img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-
 						{% endfor %}
 					{% endfor %}
 				</div>
@@ -93,73 +87,18 @@
 		</div>
 	</div>
 
-
-
-	<div class="homepage-bottom">
-		<div class="homepage-bottom-inner">
-			{% for entry in craft.entries.section('company').title("location") %}
-				<div class="homepage-bottom-text">
-					<div class="location-text">
-						{{ entry.body }}
-					</div>
-				</div>
-				<div class="homepage-bottom-image">
-					{% for image in entry.image %}
-						<img style="width:500px;" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-					{% endfor %}
-				</div>
-			{% endfor %}
-		</div>
-	</div>
-
-	<div class="homepage-middle">
+	<div class="current-openings">
 		<div class="solutionpage-middle-inner">
 			<div>
-				<div class="solutionpage-middle-list" style="font-size: 25px;">
-					PARADATA BY THE NUMBERS
-				</div>
-				<center>
-					{% for entry in craft.entries.section('bythenumbers').order('lft desc').limit(6).find() %}
-						<div class="bythenumbers-text">
-							{% for image in entry.image %}
-								<div class="bythenumbers-image-holder">
-									<img class="bythenumbers-image" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-								</div>
-							{% endfor %}
-							<div>
-								{{ entry.body }}
-							</div>
-						</div>
-					{% endfor %}
-				</center>
-			</div>
-		</div>
-	</div>
-
-
-
-	<div class="homepage-middle">
-		<div class="solutionpage-middle-inner">
-			<div class="employees-title" style="font-size: 25px;">
-				MEET OUR TEAM
-			</div>
-			{% for entry in craft.entries.section('employees').order('lft desc').find() %}
-				<div class="employees-holder">
-					<div>
-						{% for image in entry.image %}
-							<img class="employee-image" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-						{% endfor %}
+				{% for entry in craft.entries.section('careers').title("CURRENT OPENINGS:") %}
+					<div class="solutionpage-middle-list" style="font-size: 25px;">
+						{{ entry.title }}
 					</div>
-					<div class="employee-body">
-						<div class="employee-title">
-							{{ entry.title }}
-						</div>
-						<div class="employee-text">
-							{{ entry.body }}
-						</div>
+					<div class="careerspage-middle-list">
+						{{ entry.body }}
 					</div>
-				</div>
-			{% endfor %}
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 

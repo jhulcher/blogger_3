@@ -400,6 +400,11 @@
     width: 100%;
     color: black;
   }
+  .current-openings {
+    width: 100%;
+    color: black;
+    background-color: #f3f3f3;
+  }
   .prices-middle {
     padding: 15px 0px 15px 0px;
     width: 100%;
