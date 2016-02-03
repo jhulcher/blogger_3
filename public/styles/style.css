@@ -9,17 +9,18 @@
   article, aside, canvas, details, embed,
   figure, figcaption, footer, header, hgroup,
   menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+  time, mark, audio, video, p {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
+    font-size: 20px;
     font: inherit;
     vertical-align: baseline;
   }
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
-    /*display: block;*/
+    color: white;
+    font-size: 20px;
   }
   body {
     line-height: 1;
@@ -46,16 +47,35 @@
     border-width: 0;
   }
   a {
+    color: #0387ab;
     text-decoration: none;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  a:hover {
+    color: #75bbce;
   }
   p {
+    font-size: 20px;
+
     padding: 0px 0px 15px 0px;
     line-height: 1.25;
     font-family: 'Quicksand', sans-serif;
   }
+  .text-link {
+    color: white;
+    font-size: 20px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
   .text-link:hover {
+    font-size: 20px;
     cursor: pointer;
-    color: #0ae0ff;
+    color: #75bbce;
   }
   body {
     font-family: 'Quicksand', sans-serif;
@@ -79,10 +99,6 @@
   }
   header {
     height: 100%;
-  }
-  .login {
-    background-color: #ADD8E6;
-    height: 100px;
   }
   .signin {
     padding: 40px 0px 0px 0px;
@@ -118,13 +134,14 @@
     background-image: url("https://paradata.herokuapp.com/images/texture_tile-bg.png");
   }
   #header, #footer {
+    font-size: 20px;
     display: block;
-    color: #fff;
+    color: white;
     width: 80%;
     margin: 0 auto;
   }
   #header a, #footer a {
-    color: #fff;
+    font-size: 20px;
   }
   #header {
     height: 100%;
@@ -134,6 +151,8 @@
   }
   .footer-top {
     width: 100%;
+    color: white;
+    font-size: 20px;
     background-color: #2a2a2a;
   }
   main {height: 100%; width: 100%; margin: 0 auto;}
@@ -142,21 +161,19 @@
   #header h1 { float: left; margin: 0 auto; font-size: 20px; line-height: 1; }
   #header nav {
     height: 100%;
-    /*display: block;*/
     float: right;
     padding: 6px 0px 0px 0px;
     font-size: 10px;
     height: 100%;
   }
-  /*#header nav ul { height: 100%; margin: 0 auto; list-style-type: none; }
-  #header nav ul li { height: 100%; float: left; margin-left: 0px; }
-  #header nav ul li a { height: 100%; display: block; margin: 0 auto; line-height: 22px; }*/
-
   #content { height: 100%; display: block; background: #fff; }
   #content h1 { margin-top: 0; }
-  #content a { color: #da5a47; text-decoration: none; }
+  #content a {
+    text-decoration: none;
+  }
   #footer {
-    padding: 15px; font-size: 12px; text-align: center; }
+    color: white;
+    padding: 15px; font-size: 20px; text-align: center; }
   nav {
     background-color: red;
     height: 100%;
@@ -165,13 +182,44 @@
     height: 100%;
   }
   .address {
+    color: white;
+    float: right;
     text-align: left;
     font-size: 20px;
     display: inline-block;
+    padding-right: 20%;
+  }
+  .footer-links {
+    font-size: 20px;
+    color: white;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  .footer-links:hover {
+    color: #75bbce;
+  }
+  .foot-center {
+    width: 80%;
+    margin: 0 auto;
+    margin: 25px 0px 20px 0px;
+  }
+  .feet {
+    display: flex;
+    justify-content: center;
+  }
+  .copyright {
+    font-size: 12px;
+    padding: 1px 0px 0px 0px;
   }
   .company-text {
+    color: white;
     float: left;
-    padding: 0px 180px 0px 0px;
+    font-size: 20px;
+    text-align: left;
+    font-size: 20px;
+    display: inline-block;
   }
   .icon {
     width: 40px;
@@ -181,8 +229,12 @@
     width: 220px;
     display: inline-block;
     height: 44px;
-    margin: 30px 0px 0px 0px;
+    margin: 32px 0px 0px 0px;
     background:transparent url('https://paradata.herokuapp.com/images/paradata-logo.png') center top no-repeat;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .title:hover {
     cursor: pointer;
@@ -198,10 +250,38 @@
     justify-content: center;
     align-items: right;
     position: relative;
+    height: 100px;
+    border-bottom: 0px solid transparent;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .nav-link:hover {
-    color: #0ae0ff;
+    height: 90px;
     cursor: pointer;
+    color: #75bbce;
+    border-bottom: 10px solid #75bbce;
+  }
+  .admin-link {
+    background-color: #0387ab;
+    height: 100%;
+    padding: 0px 15px 0px 15px;
+    color: white;
+    font-size: 20px;
+    float: right;
+    justify-content: center;
+    align-items: right;
+    position: relative;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  .admin-link:hover {
+    background-color: #75bbce;
+    cursor: pointer;
+    color: white;
   }
   .homepage-top {
     width: 100%;
@@ -299,10 +379,15 @@
     color: #ffffff;
     padding: 0px 10px 0px 10px;
     margin: 25px 0px 0px 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .score-button:hover {
     cursor: pointer;
     background-color: #00FA9A;
+    box-shadow: 2px 2px 2px black;
   }
   .schedule-button {
     background-color: #ADD8E6;
@@ -314,6 +399,10 @@
     align-items: center;
     color: #ffffff;
     margin: 25px 0px 0px 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .bythenumbers-text {
     display: inline-block;
@@ -349,6 +438,7 @@
   .schedule-button:hover {
     cursor: pointer;
     background-color: #00FA9A;
+    box-shadow: 2px 2px 2px #D3D3D3;
   }
   .video-holder {
     width: 500px;
@@ -358,7 +448,6 @@
     line-height: 1.25;
   }
   .location-text {
-    color: black;
     font-size: 20px;
     width: 350px;
     line-height: 1.25;
@@ -390,8 +479,13 @@
     align-items: center;
     color: #ffffff;
     margin: 20px 0px 30px 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .learn-button:hover {
+    box-shadow: 2px 2px 2px #D3D3D3;
     cursor: pointer;
     background-color: #00FA9A;
   }
@@ -497,9 +591,7 @@
   }
   .solution-top-body {
     padding: 0px 0px 30px 0px;
-  }
-  .solution-top-body {
-    padding: 0px 0px 40px 0px;
+    font-size: 40px;
   }
   .company-top-body {
     font-family: 'Quicksand', sans-serif;
@@ -537,8 +629,8 @@
     font-size: 20px;
   }
   .solution-top-text {
-    padding: 0px 0px 0px 0px;
-    font-size: 40px;
+    padding: 0px 0px 25px 0px;
+    font-size: 35px;
     text-shadow: 1px 1px 1px black;
   }
   .home-top-image {
@@ -724,6 +816,10 @@
     height: 25px;
     width: 255px;
     border-radius: 5px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .comment-button:hover {
     cursor: pointer;
@@ -753,6 +849,10 @@
     height: 25px;
     width: 200px;
     border-radius: 5px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
   }
   .form-button:hover {
     cursor: pointer;
