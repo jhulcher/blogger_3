@@ -1,0 +1,128 @@
+{% extends "_layout" %}
+{% set title = "Solutions" %}
+
+{% block content %}
+
+	<div class="blogpage-top">
+		<div class="solution-top-inner">
+			<div class="blog-header-title">
+				COMPANY BLOG
+			</div>
+			<div class="solution-top-body">
+				<div class="solution-top-text">
+					THE LATEST NEWS FROM PARADATA
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="homepage-middle">
+		<div class="solutionpage-middle-inner">
+			<div class="blog-title" style="font-size: 25px;">
+				LATEST NEWS
+			</div>
+		</div>
+	</div>
+
+	{% set counter = '1' %}
+
+	{% for entry in craft.entries.section('blogentry').find() %}
+
+		{% if counter % 2 == 0 %}
+			{% set class_var = 'full-blog-entry-2' %}
+		{% elseif counter % 2 == 1 %}
+			{% set class_var = 'full-blog-entry' %}
+		{% endif %}
+
+		<div class="{{ class_var }}">
+			<div class="blog-width">
+			  <div class="solutionpage-middle-inner">
+				  {% set counter = counter + 1 %}
+				  <div class="blog-image-holder">
+					  {% for image in entry.image %}
+						  <img class="blog-image"
+									 src="{{ image.getUrl() }}"
+									 alt="{{ entry.title }}">
+					  {% endfor %}
+				  </div>
+				  <div class="blogpost-body">
+					  <div class="employee-title">
+						  {{ entry.title }}
+					  </div>
+					  <div>
+						  Posted on {{ entry.postDate|date('M j, Y') }} by
+					  </div>
+					  <div class="employee-text">
+						  <div class="author-image">
+							  {% for image in entry.authorimage %}
+								  <img class="blogger-image"
+											 src="{{ image.getUrl() }}"
+											 alt="{{ entry.title }}">
+							  {% endfor %}
+							  <div class="blogger-name">
+								  {{ entry.author }}
+							  </div>
+						  </div>
+						  <div>
+							  {{ entry.body }}
+						  </div>
+						  {% set parent = entry.title %}
+							<div class="comments-container">
+								<div class="comments-title">
+									Comments:
+								</div>
+								{% for entry in craft.entries.section('comment').relatedto(parent).order('lft desc') %}
+									<div class="single-comment">
+										<div class="author-name">
+											{{ entry.title }} says:
+										</div>
+										<div class="author-comment">
+											{{ entry.body }}
+										</div>
+										<div class="comment-date">
+											-{{ entry.postDate|date('M j, Y') }}
+										</div>
+									</div>
+								{% endfor %}
+								<div>
+									{% for entry in craft.entries.section('comment').limit(1).find() %}
+										<form method="post" action="" accept-charset="UTF-8">
+											<input type="hidden"
+														 name="action"
+														 value="guestEntries/saveEntry">
+											<input type="hidden"
+														 name="sectionId"
+														 value="{{ entry.sectionId }}">
+											<div class="request-form">
+												<div>
+													<input class="comment-author-field"
+																 maxlength="8"
+																 placeholder="Your Name" id="title"
+																 type="text"
+																 name="title">
+												</div>
+												<div>
+													<input type="hidden"
+																 value="{{ parent }}" id="body"
+																 name="fields[relatedto]"></textarea>
+												</div>
+												<div>
+													<textarea class="comment-body-field"
+																	  maxlength="65"
+																		placeholder="Your Comment" id="body"
+																		name="fields[body]"></textarea>
+												</div>
+											</div>
+											<input class="comment-button" type="submit" value="Send">
+										</form>
+									{% endfor %}
+								</div>
+							</div>
+					  </div>
+				  </div>
+		    </div>
+	 	  </div>
+	  </div>
+	{% endfor %}
+
+{% endblock %}
