@@ -86,7 +86,9 @@
 								{% endfor %}
 								<div>
 									{% for entry in craft.entries.section('comment').limit(1).find() %}
-										<form method="post" action="" accept-charset="UTF-8">
+										<form method="post"
+													action=""
+													accept-charset="UTF-8">
 											<input type="hidden"
 														 name="action"
 														 value="guestEntries/saveEntry">
@@ -113,7 +115,9 @@
 																		name="fields[body]"></textarea>
 												</div>
 											</div>
-											<input class="comment-button" type="submit" value="Send">
+											<input class="comment-button"
+														 type="submit"
+														 value="Send">
 										</form>
 									{% endfor %}
 								</div>
