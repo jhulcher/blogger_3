@@ -3,35 +3,96 @@
 
 {% block content %}
 
-		{% for entry in craft.entries.section('homepagetop').order('lft desc').limit(1).find() %}
 
       <div class="homepage-top">
+				<center>
+					<div class="home-text-body">TRANSPARENCY MEETS SUPPLY CHAIN</div>
+				</center>
+
         <div class="homepage-top-inner">
-          <div class="home-title">
-      			{{ entry.title }}
-          </div>
-					<div class="home-top-body">
-	          <div class="home-top-image">
-	            {% for image in entry.image %}
-	              <img src="{{ image.getUrl() }}" alt="{{ entry.title }}">
-	            {% endfor %}
-	          </div>
-	          <div class="home-top-text">
-							<div class="home-text-body">
-	            	{{ entry.body }}
+					<center>
+						<div class="slider">
+
+							<img class="first-image" src="images/networkscore.png" />
+
+							<div class="slideshow">
+								<img class="home-top-image" src="images/networkscore.png" />
+								<div class="caption">
+									<span>
+										THE NETWORK SCORE℠<br><br>
+										"If your product could say what it needs to be
+										healthy, what would it say?"<br><br>
+										The Paradata Network Score measures a supply
+										chain in four dimensions: Leadtime,
+										Cost, Compliance, and Risk.
+									</span>
+								</div>
 							</div>
-							<!-- <div class="score-button">
-								<a href="https://paradata.herokuapp.com/scorerequest"
-									 style="color: black;">
-									 What's Your Score?
-								</a>
-							</div> -->
-	          </div>
-					</div>
+
+							<div class="slideshow">
+								<img class="home-top-image" src="images/networkscore.png" />
+								<div class="caption">
+									<span>
+										LEADTIME<br><br>
+										"Which components will prevent me from shipping product?"<br><br>
+										Leadtime scoring evaluates and simulates the impact of
+										component decisions before committing... that’s transparency.
+									</span>
+								</div>
+							</div>
+
+							<div class="slideshow">
+								<img class="home-top-image" src="images/networkscore.png" />
+								<div class="caption">
+									<span>
+										COST<br><br>
+										"Are my component prices market competitive?"<br><br>
+										" What should I be paying based on future demand?"<br><br>
+										Cost scoring measures the variance between supplier-provided
+										costs vs the best available market cost... that’s transparency.
+									</span>
+								</div>
+							</div>
+
+							<div class="slideshow">
+								<img class="home-top-image" src="images/networkscore.png" />
+								<div class="caption">
+									<span>
+										COMPLIANCE<br><br>
+										"Are all my products compliant to current regulations?"<br><br>
+										"Am I prepared for new regulations?"<br><br>
+										Compliance scoring measures the ability of product data to
+										support rigorous examination of import/export compliance...
+										that’s transparency.
+									</span>
+								</div>
+							</div>
+
+							<div class="slideshow">
+								<img class="home-top-image" src="images/networkscore.png" />
+								<div class="caption">
+									<span>
+										RISK<br><br>
+										"What is my sole source component status by product?"<br><br>
+										"Do I have any components going end of life?
+										If yes, which ones?"<br><br>
+										Risk scoring measures how a component is sourced, proximity
+										to manufacturing locations, supplier performance... that’s
+										transparency.
+									</span>
+								</div>
+							</div>
+
+						</div>
+						<div class="learn-button">
+							<a href="https://paradata.herokuapp.com/solutions"
+								 style="color: black;">
+		        		LEARN MORE
+							</a>
+						</div>
+					</center>
         </div>
       </div>
-
-		{% endfor %}
 
     <div class="homepage-middle">
       <div class="homepage-middle-inner">

@@ -289,7 +289,6 @@
     background-image: url('https://paradata.herokuapp.com/images/electronics-2.jpg');
     background-size: cover;
     color: white;
-    margin: auto;
   }
   .prices-holder {
     display: flex;
@@ -361,7 +360,14 @@
   .homepage-top-inner {
     height: 100%;
     width: 80%;
-    margin: auto;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .solution-top-inner {
     height: 100%;
@@ -612,12 +618,16 @@
     padding: 0px 0px 30px 0px;
   }
   .home-top-text {
-    padding: 0px 0px 0px 25px;
-    font-size: 20px;
+    padding: 20px 0px 20px 0px;
+    font-size: 30px;
     width: 400px;
   }
   .home-text-body {
-    font-weight: bold;
+    padding: 25px 0px 25px 0px;
+    font-size: 45px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
     text-shadow: 1px 1px 1px black;
   }
   .employee-body {
@@ -633,8 +643,37 @@
     font-size: 35px;
     text-shadow: 1px 1px 1px black;
   }
+  .slider {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
   .home-top-image {
-    padding: 10px;
+    width: 30%;
+    /*margin: 30px;*/
+    /*margin: 0 auto;*/
+    /*float: right;*/
+  }
+  .first-image {
+    width: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15%; /* width divided by 2 */
+    margin-top: -15%; /* height divided by 2 */
+  }
+  .caption {
+    padding: 30px;
+    font-weight: bold;
+    text-align: left;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 20px;
+    width: 50%;
+    text-shadow: 1px 1px 1px black;
   }
   .employee-image {
     padding: 5px;
