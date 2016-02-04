@@ -495,6 +495,26 @@
     cursor: pointer;
     background-color: #00FA9A;
   }
+  .slideshow-button {
+    background-color: #ADD8E6;
+    border-radius: 20px;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    margin: 20px 0px 30px 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  .slideshow-button:hover {
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    background-color: #00FA9A;
+  }
   .home-title {
     font-family: 'Quicksand', sans-serif;
     font-size: 40px;

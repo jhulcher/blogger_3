@@ -3,94 +3,91 @@
 
 {% block content %}
 
-
-      <div class="homepage-top">
+    <div class="homepage-top">
+			<center>
+				<div class="home-text-body">
+					TRANSPARENCY MEETS SUPPLY CHAIN
+				</div>
+			</center>
+      <div class="homepage-top-inner">
 				<center>
-					<div class="home-text-body">TRANSPARENCY MEETS SUPPLY CHAIN</div>
+					<div class="slider">
+						<span class="slideshow">
+							<img class="home-top-image" src="images/networkscore.png" />
+							<div class="caption">
+								<span>
+									THE NETWORK SCORE℠<br><br>
+									"If your product could say what it needs to be
+									healthy, what would it say?"<br><br>
+									The Paradata Network Score measures a supply
+									chain in four dimensions: Leadtime,
+									Cost, Compliance, and Risk.
+								</span>
+							</div>
+						</span>
+						<div class="slideshow">
+							<img class="home-top-image" src="images/icon_leadtime.png" />
+							<div class="caption">
+								<span>
+									LEADTIME<br><br>
+									"Which components will prevent me from shipping product?"
+									<br><br>
+									Leadtime scoring evaluates and simulates the impact of
+									component decisions before committing... that’s transparency.
+								</span>
+							</div>
+						</div>
+						<div class="slideshow">
+							<img class="home-top-image" src="images/icon_cost.png" />
+							<div class="caption">
+								<span>
+									COST<br><br>
+									"Are my component prices market competitive?"<br><br>
+									" What should I be paying based on future demand?"<br><br>
+									Cost scoring measures the variance between supplier-provided
+									costs vs the best available market cost... that’s
+									transparency.
+								</span>
+							</div>
+						</div>
+						<div class="slideshow">
+							<img class="home-top-image" src="images/icon_compliance.png" />
+							<div class="caption">
+								<span>
+									COMPLIANCE<br><br>
+									"Are all my products compliant to current regulations?"
+									<br><br>
+									"Am I prepared for new regulations?"<br><br>
+									Compliance scoring measures the ability of product data to
+									support rigorous examination of import/export compliance...
+									that’s transparency.
+								</span>
+							</div>
+						</div>
+						<div class="slideshow">
+							<img class="home-top-image" src="images/icon_risk.png" />
+							<div class="caption">
+								<span>
+									RISK<br><br>
+									"What is my sole source component status by product?"<br><br>
+									"Do I have any components going end of life?
+									If yes, which ones?"<br><br>
+									Risk scoring measures how a component is sourced, proximity
+									to manufacturing locations, supplier performance... that’s
+									transparency.
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="slideshow-button">
+						<a href="https://paradata.herokuapp.com/solutions"
+							 style="color: black;">
+	        		LEARN MORE
+						</a>
+					</div>
 				</center>
-
-        <div class="homepage-top-inner">
-					<center>
-						<div class="slider">
-
-							<span class="slideshow">
-								<img class="home-top-image" src="images/networkscore.png" />
-								<div class="caption">
-									<span>
-										THE NETWORK SCORE℠<br><br>
-										"If your product could say what it needs to be
-										healthy, what would it say?"<br><br>
-										The Paradata Network Score measures a supply
-										chain in four dimensions: Leadtime,
-										Cost, Compliance, and Risk.
-									</span>
-								</div>
-							</span>
-
-							<div class="slideshow">
-								<img class="home-top-image" src="images/icon_leadtime.png" />
-								<div class="caption">
-									<span>
-										LEADTIME<br><br>
-										"Which components will prevent me from shipping product?"<br><br>
-										Leadtime scoring evaluates and simulates the impact of
-										component decisions before committing... that’s transparency.
-									</span>
-								</div>
-							</div>
-
-							<div class="slideshow">
-								<img class="home-top-image" src="images/icon_cost.png" />
-								<div class="caption">
-									<span>
-										COST<br><br>
-										"Are my component prices market competitive?"<br><br>
-										" What should I be paying based on future demand?"<br><br>
-										Cost scoring measures the variance between supplier-provided
-										costs vs the best available market cost... that’s transparency.
-									</span>
-								</div>
-							</div>
-
-							<div class="slideshow">
-								<img class="home-top-image" src="images/icon_compliance.png" />
-								<div class="caption">
-									<span>
-										COMPLIANCE<br><br>
-										"Are all my products compliant to current regulations?"<br><br>
-										"Am I prepared for new regulations?"<br><br>
-										Compliance scoring measures the ability of product data to
-										support rigorous examination of import/export compliance...
-										that’s transparency.
-									</span>
-								</div>
-							</div>
-
-							<div class="slideshow">
-								<img class="home-top-image" src="images/icon_risk.png" />
-								<div class="caption">
-									<span>
-										RISK<br><br>
-										"What is my sole source component status by product?"<br><br>
-										"Do I have any components going end of life?
-										If yes, which ones?"<br><br>
-										Risk scoring measures how a component is sourced, proximity
-										to manufacturing locations, supplier performance... that’s
-										transparency.
-									</span>
-								</div>
-							</div>
-
-						</div>
-						<div class="learn-button">
-							<a href="https://paradata.herokuapp.com/solutions"
-								 style="color: black;">
-		        		LEARN MORE
-							</a>
-						</div>
-					</center>
-        </div>
       </div>
+    </div>
 
     <div class="homepage-middle">
       <div class="homepage-middle-inner">
@@ -104,7 +101,6 @@
               	{{ entry.title }}
 							</div>
             </div>
-
             <div class="homepage-middle-list">
               {{ entry.body }}
             </div>
@@ -119,7 +115,6 @@
 					</div>
 				</div>
       </div>
-
     </div>
 
     <div class="homepage-bottom">
@@ -147,6 +142,5 @@
         {% endfor %}
       </div>
     </div>
-
 
 {% endblock %}
