@@ -1,0 +1,25 @@
+
+{% extends "_layout" %}
+{% set title = "Request Your Score" %}
+
+{% block content %}
+
+	<div class="request-holder">
+		<div class="form-holder">
+			<center>
+				<img class="thankyou-title" src="http://paradata.herokuapp.com/images/paradata-logo-alt.png">
+				{% for entry in craft.entries.section('ScoreRequest').limit(1).find() %}
+					<div>
+						<div class="thankyou">
+							Thanks for signing up, {{ entry.title }}!
+						</div>
+						<div class="thankyou">
+							A Paradata representative will be in touch with you shortly.
+						</div>
+					</div>
+				{% endfor %}
+			</center>
+		</div>
+	</div>
+
+{% endblock %}

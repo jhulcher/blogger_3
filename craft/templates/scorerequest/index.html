@@ -13,7 +13,7 @@
 				</div>
 				{% for entry in craft.entries.section('ScoreRequest').limit(1).find() %}
 					{{ getCsrfInput() }}
-			    <form method="post" action="" accept-charset="UTF-8">
+			    <form method="post" action="thankyou" accept-charset="UTF-8">
 		        <input type="hidden" name="action" value="guestEntries/saveEntry">
 		        <input type="hidden" name="sectionId" value="{{ entry.sectionId }}">
 						<div class="request-form">
