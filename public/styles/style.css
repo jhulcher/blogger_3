@@ -306,6 +306,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 1% 0px 1% 0px;
   }
   .pricing-box-1 {
     display: inline-block;
