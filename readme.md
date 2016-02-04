@@ -4,7 +4,7 @@
 
 visit: http://paradata.herokuapp.com
 
-<img src="public/images/webapp-1.jpg" /> <img src="public/images/webapp-2.jpg" />
+<img src="public/images/webapp-2.jpg" /> <img src="public/images/webapp-1.jpg" />
 
 #### Taking paradata.io as inspiration, I've deliberately rebuilt the entire site from scratch using Craft CMS
 #### All Craft templates, HTML & CSS were written by me, custom, for this project
