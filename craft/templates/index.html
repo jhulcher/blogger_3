@@ -5,7 +5,7 @@
 
     <div class="homepage-top">
 			<center>
-				<div class="home-text-body">
+				<div class="homepage-title">
 					TRANSPARENCY MEETS SUPPLY CHAIN
 				</div>
 			</center>
@@ -94,16 +94,20 @@
 				<div class="homepage-middle-title">
         	PARADATA DELIVERS
 				</div>
-				<div>
+				<div class="delivers">
 	        {% for entry in craft.entries.section('homepagemiddle').order('lft desc').limit(3).find() %}
-            <div class="homepage-middle-list">
-							<div class="home-middle-num">
-              	{{ entry.title }}
-							</div>
-            </div>
-            <div class="homepage-middle-list">
-              {{ entry.body }}
-            </div>
+						<div class="delivery">
+							<center>
+	            <div class="homepage-middle-list">
+								<div class="home-middle-num">
+	              	{{ entry.title }}
+								</div>
+	            </div>
+	            <div class="homepage-middle-list">
+	              {{ entry.body }}
+	            </div>
+						</center>
+						</div>
 	        {% endfor %}
 				</div>
 				<div class="homepage-middle-list">
@@ -127,12 +131,12 @@
             <div>
               {{ entry.body }}
             </div>
-						<!-- <div class="schedule-button">
+						<div class="schedule-button">
 							<a href="https://paradata.herokuapp.com/scorerequest"
 								 style="color: black;">
-								 Schedule a Demo
+								 SCHEDULE A DEMO
 							</a>
-						</div> -->
+						</div>
           </div>
           <div class="homepage-bottom-image">
             {% for image in entry.image %}
