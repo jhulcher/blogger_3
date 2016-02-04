@@ -396,6 +396,7 @@
     box-shadow: 2px 2px 2px black;
   }
   .schedule-button {
+    color: black;
     background-color: #ADD8E6;
     border-radius: 20px;
     height: 40px;
@@ -443,6 +444,7 @@
   }
   .schedule-button:hover {
     cursor: pointer;
+    color: black;
     background-color: #00FA9A;
     box-shadow: 2px 2px 2px #D3D3D3;
   }
