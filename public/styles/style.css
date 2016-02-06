@@ -49,6 +49,8 @@
   a {
     color: #0387ab;
     text-decoration: none;
+  }
+  .link-fade {
     -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
@@ -116,6 +118,7 @@
   }
   .header-container {
     width: 80%;
+    min-width: 680px;
     height: 100px;
     top: 0;
   }
@@ -345,6 +348,78 @@
     color: white;
     margin: auto;
   }
+  .menu {
+    display: block;
+    background-size: cover;
+    background-position: center;
+  }
+ .menu:hover{
+    display: block;
+    background-size: cover;
+    background-position: center;
+  }
+  .drop-name {
+    font-size: 15px;
+    padding: 5px 0px 10px 5px;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .drop {
+    position: absolute;
+    background: white;
+    width: 220px;
+    padding: 0px 5px 0px 5px;
+    color: black;
+    visibility: hidden;
+    box-shadow: 1px 1px 1px grey;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .drop li {
+    height: 25px;
+    padding: 0px 0px 0px 5px;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .drop li:hover {
+    color: #0ae0ff;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .drop-link {
+    color: black;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .drop-link:hover {
+    color: #0ae0ff;
+    text-shadow: 1px 1px 1px black;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+  .menu:hover+.drop,.drop:hover {
+    position:absolute;
+    background: white;
+    visibility:visible;
+    -moz-transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
+    transition: none;
+   }
   .blogpage-top {
     width: 100%;
     height: 100%;
@@ -641,7 +716,7 @@
     text-shadow: 1px 1px 1px black;
   }
   .employee-title {
-    padding: 20px 0px 20px 0px;
+    padding: 0px 0px 20px 0px;
     font-size: 25px;
     color: #0ae0ff;
     text-shadow: 1px 1px 1px grey;
@@ -651,7 +726,7 @@
   }
   .employees-holder {
     display: flex;
-    padding: 0px 0px 30px 0px;
+    padding: 20px 0px 20px 0px;
   }
   .home-top-text {
     padding: 20px 0px 20px 0px;
@@ -666,10 +741,21 @@
     align-items: center;
     text-shadow: 1px 1px 1px black;
   }
+  .top-links-right {
+    float: right;
+    min-width: 440px;
+  }
+  .employee-full {
+    display: block;
+    min-width: 800px;
+    padding: 20px 0px 20px 0px;
+  }
   .employee-body {
     width: 65%;
+    min-width: 450px;
     padding: 0px 0px 0px 25px;
     font-size: 20px;
+    vertical-align: top;
   }
   .blogpost-body {
     font-size: 20px;
@@ -772,6 +858,12 @@
     width: 80%;
     margin: 0 auto;
     padding: 15px 0px 15px 0px;
+  }
+  .all_employees {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0px 50px 0px;
   }
   .solutionpage-middle-list {
     display: flex;

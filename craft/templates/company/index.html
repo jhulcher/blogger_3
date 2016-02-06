@@ -1,5 +1,5 @@
 {% extends "_layout" %}
-{% set title = "Solutions" %}
+{% set title = "Company" %}
 
 {% block content %}
 
@@ -99,18 +99,39 @@
 	</div>
 
 	<div class="homepage-middle">
-		<div class="solutionpage-middle-inner">
+		<div class="all_employees">
 			<div class="employees-title" style="font-size: 25px;">
 				MEET OUR TEAM
 			</div>
 			{% for entry in craft.entries.section('employees').order('lft desc').find() %}
-				<div class="employees-holder">
-					<div>
+				<div class="employee-full">
+					<div style="display:inline-block;" id="navi">
 						{% for image in entry.image %}
-							<img class="employee-image" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
+							<img class="employee-image menu" src="{{ image.getUrl() }}" alt="{{ entry.title }}">
 						{% endfor %}
+						<ul class="drop">
+							<div class="drop-name">
+								Contact {{ entry.title }}:
+							</div>
+							<li style="font-size:15px;">
+								{% set email = ["mailto:", entry.email]|join('') %}
+								<a href="{{ email }}">
+									<div class="drop-link">
+										{{ entry.email }}
+									</div>
+								</a>
+							</li>
+							<li>
+								{% set tele = ["tel:", entry.phone]|join('') %}
+								<a href="{{ tele }}">
+									<div class="drop-link">
+										{{ entry.phone }}
+									</div>
+								</a>
+							</li>
+						</ul>
 					</div>
-					<div class="employee-body">
+					<div class="employee-body" style="display:inline-block;">
 						<div class="employee-title">
 							{{ entry.title }}
 						</div>
