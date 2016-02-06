@@ -111,7 +111,7 @@
     position: fixed;
     z-index: 99999;
     height: 100px;
-    background-image: url("https://paradata2.herokuapp.com/images/texture_tile-bg.png");
+    background-image: url("https://paradata.herokuapp.com/images/texture_tile-bg.png");
     background-color: #2a2a2a;
   }
   .header-container {
@@ -130,7 +130,7 @@
     padding: 100px 0px 0px 0px;
   }
   .stripes {
-    background-image: url("https://paradata2.herokuapp.com/images/texture_tile-bg.png");
+    background-image: url("https://paradata.herokuapp.com/images/texture_tile-bg.png");
   }
   #header, #footer {
     font-size: 20px;
@@ -242,7 +242,7 @@
     display: inline-block;
     height: 44px;
     margin: 32px 0px 0px 0px;
-    background:transparent url('https://paradata2.herokuapp.com/images/paradata-logo.png') center top no-repeat;
+    background:transparent url('https://paradata.herokuapp.com/images/paradata-logo.png') center top no-repeat;
     -moz-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
@@ -252,7 +252,7 @@
     cursor: pointer;
     width: 220px;
     height: 44px;
-    background-image: url('https://paradata2.herokuapp.com/images/paradata-logo-alt.png');
+    background-image: url('https://paradata.herokuapp.com/images/paradata-logo-alt.png');
   }
   .nav-link {
     padding: 0px 15px 0px 15px;
@@ -298,7 +298,7 @@
   .homepage-top {
     width: 100%;
     height: 100%;
-    background-image: url('https://paradata2.herokuapp.com/images/electronics-2.jpg');
+    background-image: url('https://paradata.herokuapp.com/images/electronics-2.jpg');
     background-size: cover;
     color: white;
   }
@@ -332,7 +332,7 @@
   .solutionpage-top {
     width: 100%;
     height: 100%;
-    background-image: url('https://paradata2.herokuapp.com/images/nightsky.jpg');
+    background-image: url('https://paradata.herokuapp.com/images/nightsky.jpg');
     background-size: cover;
     color: white;
     margin: auto;
@@ -340,7 +340,7 @@
   .companypage-top {
     width: 100%;
     height: 100%;
-    background-image: url('https://paradata2.herokuapp.com/images/company.jpg');
+    background-image: url('https://paradata.herokuapp.com/images/company.jpg');
     background-size: cover;
     color: white;
     margin: auto;
@@ -348,7 +348,7 @@
   .blogpage-top {
     width: 100%;
     height: 100%;
-    background-image: url('https://paradata2.herokuapp.com/images/news.jpg');
+    background-image: url('https://paradata.herokuapp.com/images/news.jpg');
     background-size: cover;
     color: white;
     margin: auto;
@@ -356,7 +356,7 @@
   .careerspage-top {
     width: 100%;
     height: 100%;
-    background-image: url('https://paradata2.herokuapp.com/images/row_crew.jpg');
+    background-image: url('https://paradata.herokuapp.com/images/row_crew.jpg');
     background-size: cover;
     color: white;
     margin: auto;
@@ -364,7 +364,7 @@
   .pricingpage-top {
     width: 100%;
     height: 100%;
-    background-image: url('https://paradata2.herokuapp.com/images/cash.jpg');
+    background-image: url('https://paradata.herokuapp.com/images/cash.jpg');
     background-size: cover;
     color: white;
     margin: auto;
@@ -818,7 +818,7 @@
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    font-size: 50px;
+    font-size: 60px;
     padding: 15px 0px 15px 0px;
   }
   .homepage-bottom-title {
