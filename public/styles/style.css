@@ -638,12 +638,12 @@
     text-shadow: 1px 1px 1px black;
   }
   .single-comment {
-    padding: 5px 0px 5px 0px;
+    padding: 0px 0px 15px 0px;
     width: 100%;
   }
   .comments-title {
     font-weight: bold;
-    padding: 5px 0px 5px 0px;
+    padding: 5px 0px 15px 0px;
     width: 100%;
   }
   .comments-container {
@@ -713,6 +713,12 @@
     font-family: 'Quicksand', sans-serif;
     padding: 0px 0px 40px 0px;
     text-shadow: 1px 1px 1px black;
+  }
+  .blog-entry-title {
+    padding: 25px 0px 20px 0px;
+    font-size: 25px;
+    color: #0ae0ff;
+    text-shadow: 1px 1px 1px grey;
   }
   .employee-title {
     padding: 0px 0px 20px 0px;

@@ -46,7 +46,7 @@
 					  {% endfor %}
 				  </div>
 				  <div class="blogpost-body">
-					  <div class="employee-title">
+					  <div class="blog-entry-title">
 						  {{ entry.title }}
 					  </div>
 					  <div>
@@ -85,6 +85,7 @@
 									</div>
 								{% endfor %}
 								<div>
+									Add a Comment:
 									{% for entry in craft.entries.section('comment').limit(1).find() %}
 										<form method="post"
 													action=""
