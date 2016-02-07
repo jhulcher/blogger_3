@@ -2,7 +2,6 @@
 {% set title = "Solutions" %}
 
 {% block content %}
-
 	<div class="blogpage-top">
 		<div class="solution-top-inner">
 			<div class="blog-header-title">
@@ -26,7 +25,9 @@
 
 	{% set counter = '1' %}
 
-	{% for entry in craft.entries.section('blogentry').find() %}
+	{% set slug = craft.request.getLastSegment() %}
+
+	{% for entry in craft.entries.section('blogentry').search(slug) %}
 
 		{% if counter % 2 == 0 %}
 			{% set class_var = 'full-blog-entry-2' %}
@@ -72,7 +73,7 @@
 								</span>
 								{% for tag in entry.tags %}
 									{% set url = ["tags/", tag]|join('') %}
-									<a class="tag" href="tags/{{ tag }}">
+									<a class="tag" href="{{ tag }}">
 										{{ tag }}
 									</a>
 								{% endfor %}
