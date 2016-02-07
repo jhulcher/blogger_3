@@ -389,7 +389,6 @@
   }
   .drop li:hover {
     color: #0ae0ff;
-    text-shadow: 1px 1px 1px black;
     cursor: pointer;
     -moz-transition: none;
     -o-transition: none;
@@ -405,7 +404,7 @@
   }
   .drop-link:hover {
     color: #0ae0ff;
-    text-shadow: 1px 1px 1px black;
+    text-shadow: .5px .5px grey;
     -moz-transition: none;
     -o-transition: none;
     -webkit-transition: none;
