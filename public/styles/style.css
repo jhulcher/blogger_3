@@ -876,6 +876,149 @@
     margin: 0 auto;
     padding: 15px 0px 15px 0px;
   }
+
+
+
+  .hero-holder {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    position: relative;
+
+  }
+  .hero-image {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .hero-text {
+    height: 100%;
+    width: 100%;
+  }
+  .hero-text-title {
+    z-index: 100;
+    position: absolute;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 220px;
+    color: white;
+    text-shadow: 1px 1px black;
+    vertical-align: bottom;
+    padding: 0px 0px 0px 15px;
+    margin: 0 auto;
+    width: 90%;
+    font-weight: bold;
+  }
+  .hero-background {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+  }
+  .hero-text:hover .hero-background {
+    background: rgba(54, 25, 25, .5);
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  .hero-text:hover .hero-text-title {
+    color: white;
+    text-shadow: 1px 1px black;
+    top: 30px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+  }
+  .hero-text-body {
+    z-index: 100;
+    position: absolute;
+    color: transparent;
+    text-shadow: .5px .5px transparent;
+    height: 100%;
+    padding: 0px 0px 0px 15px;
+    margin: 0 auto;
+    width: 90%;
+    font-size: 20px;
+    left: 0;
+    top: 80px;
+  }
+  .hero-text:hover .hero-text-body {
+    margin: 0 auto;
+
+    color: white;
+    text-shadow: .5px .5px black;
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+  }
+
+  .hero-button {
+    z-index: 100;
+    position: absolute;
+    top: 230px;
+    left 0;
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    color: transparent;
+  }
+  .hero-text:hover .hero-button {
+    color: white;
+    text-shadow: .5px .5px black;
+
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+  }
+  .hero-button-div {
+    color: transparent;
+    text-shadow: 0px 0px transparent;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: transparent;
+    height: 30px;
+    width: 150px;
+    padding: 8px 0px 0px 0px;
+    box-shadow: 0px 0px 0px black;
+    background-color: transparent;
+  }
+  .hero-button-div:hover {
+    color: black;
+    text-shadow: 0px 0px transparent;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px black;
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+  }
+  .hero-text:hover .hero-button-div {
+    color: black;
+    text-shadow: 0px 0px transparent;
+    background-color: #ADD8E6;
+    -moz-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
+  }
+
+
+
+
+
+
+
+
   .all_employees {
     height: 100%;
     width: 80%;

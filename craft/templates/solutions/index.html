@@ -122,4 +122,45 @@
 		</a>
 	</div>
 
+	<div class="homepage-middle">
+		<div class="solutionpage-middle-inner">
+			<center>
+				{% for entry in craft.entries.section('solutionshero').order('lft desc').limit(18).find() %}
+					<div class="hero-holder">
+
+						{% for image in entry.image %}
+							<img class="hero-image" src="{{ image.getUrl() }}">
+						{% endfor %}
+
+						<div class="hero-text">
+
+							<div class="hero-button">
+								<div class="hero-button-div">
+									Learn More
+								</div>
+							</div>
+
+							<div class="hero-background">
+							</div>
+							<div class="hero-text-title">
+								{{ entry.title }}
+							</div>
+							<div class="hero-text-body">
+								{{ entry.body }}
+							</div>
+
+							<div class="hero-button">
+								<div class="hero-button-div">
+									Learn More
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				{% endfor %}
+			</center>
+		</div>
+	</div>
+
 {% endblock %}
