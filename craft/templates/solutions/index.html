@@ -114,7 +114,7 @@
 		</div>
 	</div>
 
-	<div class="solution-bottom">
+	<div class="solutionpage-bottom">
 		<a href="https://paradata.herokuapp.com/scorerequest">
 			<div class="learn-button" style="color: black;">
 				SCHEDULE A DEMO
@@ -122,8 +122,11 @@
 		</a>
 	</div>
 
-	<div class="homepage-middle">
-		<div class="solutionpage-middle-inner">
+	<div class="heros-section">
+		<div class="heros-inner">
+			<div class="heros-title" style="font-size: 30px;">
+					The Paradata Heros
+			</div>
 			<center>
 				{% for entry in craft.entries.section('solutionshero').order('lft desc').limit(18).find() %}
 					<div class="hero-holder">
@@ -133,12 +136,6 @@
 						{% endfor %}
 
 						<div class="hero-text">
-
-							<div class="hero-button">
-								<div class="hero-button-div">
-									Learn More
-								</div>
-							</div>
 
 							<div class="hero-background">
 							</div>
