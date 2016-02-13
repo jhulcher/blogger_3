@@ -117,26 +117,30 @@
 	<div class="heros-section">
 		<div class="heros-inner">
 			<div class="heros-title" style="font-size: 30px;">
-					The Paradata Heros
+					The Paradata Support Team Heros
 			</div>
 			<center>
 				{% for entry in craft.entries.section('solutionshero').order('lft desc').limit(18).find() %}
-					<div class="hero-holder">
-						{% for image in entry.image %}
-							<img class="hero-image" src="{{ image.getUrl() }}">
-						{% endfor %}
-						<div class="hero-text">
-							<div class="hero-background">
-							</div>
-							<div class="hero-text-title">
-								{{ entry.title }}
-							</div>
-							<div class="hero-text-body">
-								{{ entry.body }}
-							</div>
-							<div class="hero-button">
-								<div class="hero-button-div">
-									Learn More
+					<div class="hero-shadow">
+						<div class="hero-holder">
+							{% for image in entry.image %}
+								<img class="hero-image" src="{{ image.getUrl() }}">
+							{% endfor %}
+							<div class="hero-text">
+								<div class="hero-background">
+								</div>
+								<div class="hero-text-title">
+									{{ entry.title }}
+								</div>
+								<div class="hero-text-body">
+									{{ entry.body }}
+								</div>
+								<div class="hero-button">
+									<a href="platform">
+										<div class="hero-button-div">
+											Learn More
+										</div>
+									</a>
 								</div>
 							</div>
 						</div>
