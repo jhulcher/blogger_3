@@ -893,6 +893,10 @@
     margin: 0 auto;
     padding: 15px 0px 15px 0px;
   }
+
+
+
+
   .heros-inner {
     width: 80%;
     margin: 0 auto;
@@ -923,7 +927,7 @@
     font-size: 20px;
     width: 100%;
     left: 0;
-    top: 220px;
+    top: 240px;
     color: white;
     text-shadow: 1px 1px black;
     padding: 0px 0px 0px 15px;
@@ -975,13 +979,14 @@
   }
   .hero-button {
     position: absolute;
-    top: 230px;
+    top: 240px;
     left 0;
-    width: 100%;
+    width: 150px;
     font-size: 20px;
     color: transparent;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
+    padding: 0px 0px 0px 75px;
   }
   .hero-holder:hover .hero-button {
     color: white;
@@ -1024,6 +1029,9 @@
     -webkit-transition: all .5s ease-in;
     transition: all .5s ease-in;
   }
+  .hero-button-holder {
+    width: 200px;
+  }
   .heros-title {
     display: flex;
     margin: 0 auto;
@@ -1039,6 +1047,10 @@
     align-items: center;
     background-color: #f3f3f3;
   }
+
+
+
+
   .all_employees {
     height: 100%;
     width: 80%;
