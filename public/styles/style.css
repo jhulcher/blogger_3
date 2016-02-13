@@ -893,10 +893,9 @@
     margin: 0 auto;
     padding: 15px 0px 15px 0px;
   }
-
-
-
-
+  .heros-section-title-area {
+    padding: 20px 0px 20px 0px;
+  }
   .heros-inner {
     width: 80%;
     margin: 0 auto;
@@ -1047,10 +1046,6 @@
     align-items: center;
     background-color: #f3f3f3;
   }
-
-
-
-
   .all_employees {
     height: 100%;
     width: 80%;
