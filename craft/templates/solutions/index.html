@@ -116,8 +116,15 @@
 
 	<div class="heros-section">
 		<div class="heros-inner">
-			<div class="heros-title" style="font-size: 30px;">
-					The Paradata Support Team Heros
+			<div>
+				{% for entry in craft.entries.section('herotitle').limit(1).find() %}
+					<div class="solutionpage-middle-list" style="font-size: 25px;">
+						{{ entry.title }}
+					</div>
+					<div class="solutionpage-middle-list">
+						{{ entry.body }}
+					</div>
+				{% endfor %}
 			</div>
 			<center>
 				{% for entry in craft.entries.section('solutionshero').order('lft desc').limit(18).find() %}
