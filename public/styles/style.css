@@ -969,6 +969,9 @@
     width: 100%;
     font-size: 20px;
     color: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+
   }
   .hero-holder:hover .hero-button {
     color: white;
@@ -981,18 +984,22 @@
   .hero-button-div {
     color: transparent;
     text-shadow: 0px 0px transparent;
-    border: 1px solid transparent;
+    box-shadow: 0px 0px 0px transparent;
+
+    border: 0px solid transparent;
     border-radius: 20px;
     background-color: transparent;
     height: 30px;
     width: 150px;
     padding: 8px 0px 0px 0px;
-    box-shadow: 0px 0px 0px black;
+    box-shadow: 0px 0px 0px transparent;
     background-color: transparent;
   }
   .hero-button-div:hover {
     color: black;
     text-shadow: 0px 0px transparent;
+    border: 0px solid transparent;
+
     cursor: pointer;
     box-shadow: 1px 1px 1px black;
     -moz-transition: all .5s ease-in;
