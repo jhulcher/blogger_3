@@ -863,7 +863,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    background-color: #f3f3f3;
   }
   .solutionpage-bottom {
     display: flex;
@@ -872,7 +871,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-
     background-color: #f3f3f3;
   }
   .solutionpage-middle {
@@ -886,19 +884,17 @@
     margin: 0 auto;
     padding: 15px 0px 15px 0px;
   }
-
-
   .heros-inner {
     width: 80%;
     margin: 0 auto;
-    padding: 15px 0px 15px 0px;
+    padding: 15px 0px 0px 0px;
   }
   .hero-holder {
     display: inline-block;
     width: 300px;
-    height: 300px;
+    height: 0px;
     position: relative;
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 305px 0px;
     box-shadow: .5px .5px .5px #e0e0e0;
   }
   .hero-image {
@@ -972,7 +968,6 @@
     color: transparent;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
-
   }
   .hero-holder:hover .hero-button {
     color: white;
@@ -986,7 +981,6 @@
     color: transparent;
     text-shadow: 0px 0px transparent;
     box-shadow: 0px 0px 0px transparent;
-
     border: 0px solid transparent;
     border-radius: 20px;
     background-color: transparent;
@@ -1000,7 +994,6 @@
     color: black;
     text-shadow: 0px 0px transparent;
     border: 0px solid transparent;
-
     cursor: pointer;
     box-shadow: 1px 1px 1px black;
     -moz-transition: all .5s ease-in;
@@ -1017,19 +1010,20 @@
     -webkit-transition: all .5s ease-in;
     transition: all .5s ease-in;
   }
-
-
-
-
-
-
-
   .heros-title {
     display: flex;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
     padding: 20px 0px 40px 0px;
+  }
+  .heros-section {
+    padding: 0px 0px 25px 0px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
   }
   .all_employees {
     height: 100%;
@@ -1092,13 +1086,6 @@
   .homepage-middle-title {
     padding: 45px 0px 50px 0px;
     font-size: 28px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .heros-section {
-    padding: 0px 0px 60px 0px;
-    font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;

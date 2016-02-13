@@ -114,14 +114,6 @@
 		</div>
 	</div>
 
-	<div class="solution-bottom">
-		<a href="https://paradata.herokuapp.com/scorerequest">
-			<div class="learn-button" style="color: black;">
-				SCHEDULE A DEMO
-			</div>
-		</a>
-	</div>
-
 	<div class="heros-section">
 		<div class="heros-inner">
 			<div class="heros-title" style="font-size: 30px;">
@@ -130,13 +122,10 @@
 			<center>
 				{% for entry in craft.entries.section('solutionshero').order('lft desc').limit(18).find() %}
 					<div class="hero-holder">
-
 						{% for image in entry.image %}
 							<img class="hero-image" src="{{ image.getUrl() }}">
 						{% endfor %}
-
 						<div class="hero-text">
-
 							<div class="hero-background">
 							</div>
 							<div class="hero-text-title">
@@ -145,19 +134,24 @@
 							<div class="hero-text-body">
 								{{ entry.body }}
 							</div>
-
 							<div class="hero-button">
 								<div class="hero-button-div">
 									Learn More
 								</div>
 							</div>
-
 						</div>
-
 					</div>
 				{% endfor %}
 			</center>
 		</div>
+	</div>
+
+	<div class="solution-bottom">
+		<a href="https://paradata.herokuapp.com/scorerequest">
+			<div class="learn-button" style="color: black;">
+				SCHEDULE A DEMO
+			</div>
+		</a>
 	</div>
 
 {% endblock %}
