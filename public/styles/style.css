@@ -118,7 +118,7 @@
   }
   .header-container {
     width: 80%;
-    min-width: 680px;
+    min-width: 710px;
     height: 100px;
     top: 0;
   }
@@ -258,7 +258,7 @@
     background-image: url('https://paradata.herokuapp.com/images/paradata-logo-alt.png');
   }
   .nav-link {
-    padding: 0px 15px 0px 15px;
+    padding: 0px 12px 0px 12px;
     color: white;
     font-size: 20px;
     float: right;
@@ -756,7 +756,7 @@
   }
   .home-top-text {
     padding: 20px 0px 20px 0px;
-    font-size: 30px;
+    font-size: 30px0
     width: 400px;
   }
   .homepage-title {
@@ -769,7 +769,7 @@
   }
   .top-links-right {
     float: right;
-    min-width: 440px;
+    /*min-width: 410px;*/
   }
   .employee-full {
     display: block;
@@ -893,6 +893,12 @@
     margin: 0 auto;
     padding: 15px 0px 15px 0px;
   }
+
+
+
+
+
+
   .heros-section-title-area {
     padding: 20px 0px 20px 0px;
   }
@@ -918,8 +924,6 @@
     position: absolute;
     left: 0;
     top: 0;
-  }
-  .hero-text {
   }
   .hero-text-title {
     position: absolute;
@@ -1046,6 +1050,12 @@
     align-items: center;
     background-color: #f3f3f3;
   }
+
+
+
+
+
+
   .all_employees {
     height: 100%;
     width: 80%;
